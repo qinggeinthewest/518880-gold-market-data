@@ -1,0 +1,48 @@
+name: V3 Research - 518880 historical strategies
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'research/collect_history.py'
+      - 'research/v3_backtest.py'
+      - 'research/PROTOCOL_V3.md'
+      - '.github/workflows/v3_research.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: v3-518880-research
+  cancel-in-progress: false
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check Python syntax
+        run: python -m py_compile research/collect_history.py research/v3_backtest.py
+      - name: Acquire and validate extended domestic ETF history
+        run: python research/collect_history.py
+      - name: Run pre-registered buy sell and correction comparisons
+        run: python research/v3_backtest.py
+      - name: Write result digest
+        run: |
+          cat research/data_status.json
+          sed -n '1,35p' research/RESULTS.md
+      - name: Commit research-only data and reports
+        run: |
+          git add -A research/
+          if git diff --cached --quiet; then
+            echo "No updated research data."
+            exit 0
+          fi
+          git -c user.name='518880 Research Bot' -c user.email='518880-research@users.noreply.github.com' commit -m 'Update V3 research data and evidence gate'
+          git pull --rebase
+          git push
