@@ -1,500 +1,3956 @@
 {
   "status": "PROVISIONAL_UNAUDITED",
-  "notes": "Research calculations completed, but corporate-action/distribution-adjusted total returns and independent out-of-sample validity are NOT certified.",
+  "notes": "Matched rolling 3-year portfolios calculated. Historical returns/adjustments and distribution events not independently audited; overlapping windows are correlated.",
   "bars": 3233,
   "source": "eastmoney_hfq",
   "adjustment": "hfq_as_published_needs_corporate_event_review",
-  "results": [
+  "windows": [
+    {
+      "window_id": 1,
+      "start": "2014-08-11",
+      "end": "2017-09-12",
+      "results": [
+        {
+          "policy": "B0_lump",
+          "start_date": "2014-08-11",
+          "end_date": "2017-09-12",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 1.355,
+            "cagr_pct": 0.676,
+            "max_drawdown_pct": -2.595,
+            "volatility_pct": 2.038,
+            "sharpe_rf0": 0.341,
+            "longest_underwater_trading_days": 267
+          },
+          "holdout": {
+            "total_return_pct": -0.343,
+            "cagr_pct": -0.343,
+            "max_drawdown_pct": -1.603,
+            "volatility_pct": 1.483,
+            "sharpe_rf0": -0.224,
+            "longest_underwater_trading_days": 246
+          },
+          "full": {
+            "total_return_pct": 1.007,
+            "cagr_pct": 0.335,
+            "max_drawdown_pct": -2.595,
+            "volatility_pct": 1.87,
+            "sharpe_rf0": 0.188,
+            "longest_underwater_trading_days": 291
+          },
+          "sleeve_pnl_initial100": 0.3018,
+          "trades": 15,
+          "buy_count": 1,
+          "sell_count": 14,
+          "correction_exit_count": 0,
+          "cap_trim_count": 14,
+          "closing_gold_weight_pct": 40.343,
+          "gold_weight_exceed_15_days": 13,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "B1_DCA",
+          "start_date": "2014-08-11",
+          "end_date": "2017-09-12",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 1.656,
+            "cagr_pct": 0.826,
+            "max_drawdown_pct": -2.603,
+            "volatility_pct": 1.998,
+            "sharpe_rf0": 0.422,
+            "longest_underwater_trading_days": 267
+          },
+          "holdout": {
+            "total_return_pct": -0.343,
+            "cagr_pct": -0.343,
+            "max_drawdown_pct": -1.603,
+            "volatility_pct": 1.483,
+            "sharpe_rf0": -0.224,
+            "longest_underwater_trading_days": 246
+          },
+          "full": {
+            "total_return_pct": 1.307,
+            "cagr_pct": 0.434,
+            "max_drawdown_pct": -2.603,
+            "volatility_pct": 1.842,
+            "sharpe_rf0": 0.245,
+            "longest_underwater_trading_days": 291
+          },
+          "sleeve_pnl_initial100": 0.6379,
+          "trades": 22,
+          "buy_count": 6,
+          "sell_count": 16,
+          "correction_exit_count": 0,
+          "cap_trim_count": 16,
+          "closing_gold_weight_pct": 40.343,
+          "gold_weight_exceed_15_days": 18,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "B2_cash",
+          "start_date": "2014-08-11",
+          "end_date": "2017-09-12",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 0.917,
+            "cagr_pct": 0.459,
+            "max_drawdown_pct": -1.73,
+            "volatility_pct": 1.375,
+            "sharpe_rf0": 0.34,
+            "longest_underwater_trading_days": 267
+          },
+          "holdout": {
+            "total_return_pct": -0.254,
+            "cagr_pct": -0.254,
+            "max_drawdown_pct": -1.187,
+            "volatility_pct": 1.096,
+            "sharpe_rf0": -0.226,
+            "longest_underwater_trading_days": 246
+          },
+          "full": {
+            "total_return_pct": 0.661,
+            "cagr_pct": 0.22,
+            "max_drawdown_pct": -1.73,
+            "volatility_pct": 1.288,
+            "sharpe_rf0": 0.177,
+            "longest_underwater_trading_days": 291
+          },
+          "sleeve_pnl_initial100": 0.0,
+          "trades": 0,
+          "buy_count": 0,
+          "sell_count": 0,
+          "correction_exit_count": 0,
+          "cap_trim_count": 0,
+          "closing_gold_weight_pct": 29.814,
+          "gold_weight_exceed_15_days": 0,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S1_TSMOM252",
+          "start_date": "2014-08-11",
+          "end_date": "2017-09-12",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 1.292,
+            "cagr_pct": 0.645,
+            "max_drawdown_pct": -2.004,
+            "volatility_pct": 1.678,
+            "sharpe_rf0": 0.392,
+            "longest_underwater_trading_days": 272
+          },
+          "holdout": {
+            "total_return_pct": -0.453,
+            "cagr_pct": -0.453,
+            "max_drawdown_pct": -1.603,
+            "volatility_pct": 1.443,
+            "sharpe_rf0": -0.308,
+            "longest_underwater_trading_days": 246
+          },
+          "full": {
+            "total_return_pct": 0.833,
+            "cagr_pct": 0.277,
+            "max_drawdown_pct": -2.004,
+            "volatility_pct": 1.602,
+            "sharpe_rf0": 0.181,
+            "longest_underwater_trading_days": 291
+          },
+          "sleeve_pnl_initial100": 0.1716,
+          "trades": 27,
+          "buy_count": 6,
+          "sell_count": 21,
+          "correction_exit_count": 0,
+          "cap_trim_count": 15,
+          "closing_gold_weight_pct": 29.763,
+          "gold_weight_exceed_15_days": 16,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S2_DONCHIAN55_20",
+          "start_date": "2014-08-11",
+          "end_date": "2017-09-12",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 0.94,
+            "cagr_pct": 0.47,
+            "max_drawdown_pct": -2.235,
+            "volatility_pct": 1.677,
+            "sharpe_rf0": 0.288,
+            "longest_underwater_trading_days": 270
+          },
+          "holdout": {
+            "total_return_pct": -0.386,
+            "cagr_pct": -0.386,
+            "max_drawdown_pct": -1.186,
+            "volatility_pct": 1.176,
+            "sharpe_rf0": -0.323,
+            "longest_underwater_trading_days": 246
+          },
+          "full": {
+            "total_return_pct": 0.55,
+            "cagr_pct": 0.183,
+            "max_drawdown_pct": -2.235,
+            "volatility_pct": 1.527,
+            "sharpe_rf0": 0.128,
+            "longest_underwater_trading_days": 291
+          },
+          "sleeve_pnl_initial100": -0.1107,
+          "trades": 48,
+          "buy_count": 8,
+          "sell_count": 40,
+          "correction_exit_count": 0,
+          "cap_trim_count": 33,
+          "closing_gold_weight_pct": 42.198,
+          "gold_weight_exceed_15_days": 25,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S3_MA50_200",
+          "start_date": "2014-08-11",
+          "end_date": "2017-09-12",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 1.276,
+            "cagr_pct": 0.637,
+            "max_drawdown_pct": -1.81,
+            "volatility_pct": 1.619,
+            "sharpe_rf0": 0.4,
+            "longest_underwater_trading_days": 369
+          },
+          "holdout": {
+            "total_return_pct": -0.809,
+            "cagr_pct": -0.809,
+            "max_drawdown_pct": -1.551,
+            "volatility_pct": 1.374,
+            "sharpe_rf0": -0.584,
+            "longest_underwater_trading_days": 246
+          },
+          "full": {
+            "total_return_pct": 0.457,
+            "cagr_pct": 0.152,
+            "max_drawdown_pct": -1.832,
+            "volatility_pct": 1.541,
+            "sharpe_rf0": 0.106,
+            "longest_underwater_trading_days": 369
+          },
+          "sleeve_pnl_initial100": -0.2044,
+          "trades": 46,
+          "buy_count": 12,
+          "sell_count": 34,
+          "correction_exit_count": 0,
+          "cap_trim_count": 23,
+          "closing_gold_weight_pct": 42.198,
+          "gold_weight_exceed_15_days": 23,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S1_TSMOM252_ATR",
+          "start_date": "2014-08-11",
+          "end_date": "2017-09-12",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 1.302,
+            "cagr_pct": 0.65,
+            "max_drawdown_pct": -1.87,
+            "volatility_pct": 1.601,
+            "sharpe_rf0": 0.413,
+            "longest_underwater_trading_days": 270
+          },
+          "holdout": {
+            "total_return_pct": -0.665,
+            "cagr_pct": -0.665,
+            "max_drawdown_pct": -1.818,
+            "volatility_pct": 1.449,
+            "sharpe_rf0": -0.453,
+            "longest_underwater_trading_days": 246
+          },
+          "full": {
+            "total_return_pct": 0.628,
+            "cagr_pct": 0.209,
+            "max_drawdown_pct": -2.146,
+            "volatility_pct": 1.552,
+            "sharpe_rf0": 0.142,
+            "longest_underwater_trading_days": 291
+          },
+          "sleeve_pnl_initial100": -0.0329,
+          "trades": 113,
+          "buy_count": 22,
+          "sell_count": 91,
+          "correction_exit_count": 16,
+          "cap_trim_count": 69,
+          "closing_gold_weight_pct": 29.824,
+          "gold_weight_exceed_15_days": 63,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S2_DONCHIAN55_20_ATR",
+          "start_date": "2014-08-11",
+          "end_date": "2017-09-12",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 0.985,
+            "cagr_pct": 0.492,
+            "max_drawdown_pct": -1.971,
+            "volatility_pct": 1.56,
+            "sharpe_rf0": 0.323,
+            "longest_underwater_trading_days": 264
+          },
+          "holdout": {
+            "total_return_pct": -0.212,
+            "cagr_pct": -0.212,
+            "max_drawdown_pct": -1.186,
+            "volatility_pct": 1.154,
+            "sharpe_rf0": -0.178,
+            "longest_underwater_trading_days": 141
+          },
+          "full": {
+            "total_return_pct": 0.771,
+            "cagr_pct": 0.257,
+            "max_drawdown_pct": -1.971,
+            "volatility_pct": 1.437,
+            "sharpe_rf0": 0.186,
+            "longest_underwater_trading_days": 291
+          },
+          "sleeve_pnl_initial100": 0.1095,
+          "trades": 44,
+          "buy_count": 9,
+          "sell_count": 35,
+          "correction_exit_count": 8,
+          "cap_trim_count": 27,
+          "closing_gold_weight_pct": 42.198,
+          "gold_weight_exceed_15_days": 20,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S3_MA50_200_ATR",
+          "start_date": "2014-08-11",
+          "end_date": "2017-09-12",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 1.189,
+            "cagr_pct": 0.594,
+            "max_drawdown_pct": -1.77,
+            "volatility_pct": 1.556,
+            "sharpe_rf0": 0.388,
+            "longest_underwater_trading_days": 369
+          },
+          "holdout": {
+            "total_return_pct": -0.835,
+            "cagr_pct": -0.835,
+            "max_drawdown_pct": -1.642,
+            "volatility_pct": 1.383,
+            "sharpe_rf0": -0.599,
+            "longest_underwater_trading_days": 246
+          },
+          "full": {
+            "total_return_pct": 0.344,
+            "cagr_pct": 0.115,
+            "max_drawdown_pct": -1.971,
+            "volatility_pct": 1.5,
+            "sharpe_rf0": 0.084,
+            "longest_underwater_trading_days": 369
+          },
+          "sleeve_pnl_initial100": -0.3173,
+          "trades": 72,
+          "buy_count": 17,
+          "sell_count": 55,
+          "correction_exit_count": 11,
+          "cap_trim_count": 39,
+          "closing_gold_weight_pct": 42.198,
+          "gold_weight_exceed_15_days": 39,
+          "core_alone_exceed_15_days": 0
+        }
+      ]
+    },
+    {
+      "window_id": 2,
+      "start": "2015-08-20",
+      "end": "2018-09-21",
+      "results": [
+        {
+          "policy": "B0_lump",
+          "start_date": "2015-08-20",
+          "end_date": "2018-09-21",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 2.58,
+            "cagr_pct": 1.284,
+            "max_drawdown_pct": -1.884,
+            "volatility_pct": 1.862,
+            "sharpe_rf0": 0.695,
+            "longest_underwater_trading_days": 291
+          },
+          "holdout": {
+            "total_return_pct": -0.575,
+            "cagr_pct": -0.575,
+            "max_drawdown_pct": -0.955,
+            "volatility_pct": 0.936,
+            "sharpe_rf0": -0.612,
+            "longest_underwater_trading_days": 161
+          },
+          "full": {
+            "total_return_pct": 1.99,
+            "cagr_pct": 0.66,
+            "max_drawdown_pct": -1.884,
+            "volatility_pct": 1.613,
+            "sharpe_rf0": 0.416,
+            "longest_underwater_trading_days": 543
+          },
+          "sleeve_pnl_initial100": 0.6739,
+          "trades": 22,
+          "buy_count": 1,
+          "sell_count": 21,
+          "correction_exit_count": 0,
+          "cap_trim_count": 21,
+          "closing_gold_weight_pct": 40.577,
+          "gold_weight_exceed_15_days": 17,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "B1_DCA",
+          "start_date": "2015-08-20",
+          "end_date": "2018-09-21",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 2.649,
+            "cagr_pct": 1.318,
+            "max_drawdown_pct": -1.884,
+            "volatility_pct": 1.813,
+            "sharpe_rf0": 0.732,
+            "longest_underwater_trading_days": 291
+          },
+          "holdout": {
+            "total_return_pct": -0.575,
+            "cagr_pct": -0.575,
+            "max_drawdown_pct": -0.955,
+            "volatility_pct": 0.936,
+            "sharpe_rf0": -0.612,
+            "longest_underwater_trading_days": 161
+          },
+          "full": {
+            "total_return_pct": 2.058,
+            "cagr_pct": 0.682,
+            "max_drawdown_pct": -1.884,
+            "volatility_pct": 1.575,
+            "sharpe_rf0": 0.439,
+            "longest_underwater_trading_days": 543
+          },
+          "sleeve_pnl_initial100": 0.732,
+          "trades": 26,
+          "buy_count": 6,
+          "sell_count": 20,
+          "correction_exit_count": 0,
+          "cap_trim_count": 20,
+          "closing_gold_weight_pct": 40.577,
+          "gold_weight_exceed_15_days": 19,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "B2_cash",
+          "start_date": "2015-08-20",
+          "end_date": "2018-09-21",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 1.807,
+            "cagr_pct": 0.901,
+            "max_drawdown_pct": -1.541,
+            "volatility_pct": 1.419,
+            "sharpe_rf0": 0.639,
+            "longest_underwater_trading_days": 291
+          },
+          "holdout": {
+            "total_return_pct": -0.47,
+            "cagr_pct": -0.47,
+            "max_drawdown_pct": -0.78,
+            "volatility_pct": 0.764,
+            "sharpe_rf0": -0.613,
+            "longest_underwater_trading_days": 161
+          },
+          "full": {
+            "total_return_pct": 1.329,
+            "cagr_pct": 0.441,
+            "max_drawdown_pct": -1.541,
+            "volatility_pct": 1.24,
+            "sharpe_rf0": 0.361,
+            "longest_underwater_trading_days": 543
+          },
+          "sleeve_pnl_initial100": 0.0,
+          "trades": 0,
+          "buy_count": 0,
+          "sell_count": 0,
+          "correction_exit_count": 0,
+          "cap_trim_count": 0,
+          "closing_gold_weight_pct": 33.103,
+          "gold_weight_exceed_15_days": 0,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S1_TSMOM252",
+          "start_date": "2015-08-20",
+          "end_date": "2018-09-21",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 2.0,
+            "cagr_pct": 0.997,
+            "max_drawdown_pct": -1.884,
+            "volatility_pct": 1.702,
+            "sharpe_rf0": 0.592,
+            "longest_underwater_trading_days": 291
+          },
+          "holdout": {
+            "total_return_pct": -0.563,
+            "cagr_pct": -0.563,
+            "max_drawdown_pct": -0.951,
+            "volatility_pct": 0.846,
+            "sharpe_rf0": -0.663,
+            "longest_underwater_trading_days": 161
+          },
+          "full": {
+            "total_return_pct": 1.426,
+            "cagr_pct": 0.474,
+            "max_drawdown_pct": -1.884,
+            "volatility_pct": 1.473,
+            "sharpe_rf0": 0.328,
+            "longest_underwater_trading_days": 543
+          },
+          "sleeve_pnl_initial100": 0.0977,
+          "trades": 47,
+          "buy_count": 8,
+          "sell_count": 39,
+          "correction_exit_count": 0,
+          "cap_trim_count": 31,
+          "closing_gold_weight_pct": 33.071,
+          "gold_weight_exceed_15_days": 29,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S2_DONCHIAN55_20",
+          "start_date": "2015-08-20",
+          "end_date": "2018-09-21",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 1.774,
+            "cagr_pct": 0.885,
+            "max_drawdown_pct": -1.649,
+            "volatility_pct": 1.644,
+            "sharpe_rf0": 0.544,
+            "longest_underwater_trading_days": 291
+          },
+          "holdout": {
+            "total_return_pct": -0.59,
+            "cagr_pct": -0.59,
+            "max_drawdown_pct": -0.897,
+            "volatility_pct": 0.795,
+            "sharpe_rf0": -0.741,
+            "longest_underwater_trading_days": 249
+          },
+          "full": {
+            "total_return_pct": 1.173,
+            "cagr_pct": 0.39,
+            "max_drawdown_pct": -1.775,
+            "volatility_pct": 1.418,
+            "sharpe_rf0": 0.282,
+            "longest_underwater_trading_days": 543
+          },
+          "sleeve_pnl_initial100": -0.1551,
+          "trades": 51,
+          "buy_count": 8,
+          "sell_count": 43,
+          "correction_exit_count": 0,
+          "cap_trim_count": 35,
+          "closing_gold_weight_pct": 33.154,
+          "gold_weight_exceed_15_days": 26,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S3_MA50_200",
+          "start_date": "2015-08-20",
+          "end_date": "2018-09-21",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 1.804,
+            "cagr_pct": 0.9,
+            "max_drawdown_pct": -1.855,
+            "volatility_pct": 1.686,
+            "sharpe_rf0": 0.54,
+            "longest_underwater_trading_days": 291
+          },
+          "holdout": {
+            "total_return_pct": -0.521,
+            "cagr_pct": -0.521,
+            "max_drawdown_pct": -0.828,
+            "volatility_pct": 0.793,
+            "sharpe_rf0": -0.655,
+            "longest_underwater_trading_days": 249
+          },
+          "full": {
+            "total_return_pct": 1.273,
+            "cagr_pct": 0.423,
+            "max_drawdown_pct": -2.011,
+            "volatility_pct": 1.45,
+            "sharpe_rf0": 0.298,
+            "longest_underwater_trading_days": 543
+          },
+          "sleeve_pnl_initial100": -0.0559,
+          "trades": 49,
+          "buy_count": 11,
+          "sell_count": 38,
+          "correction_exit_count": 0,
+          "cap_trim_count": 27,
+          "closing_gold_weight_pct": 33.121,
+          "gold_weight_exceed_15_days": 27,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S1_TSMOM252_ATR",
+          "start_date": "2015-08-20",
+          "end_date": "2018-09-21",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 1.762,
+            "cagr_pct": 0.879,
+            "max_drawdown_pct": -2.093,
+            "volatility_pct": 1.664,
+            "sharpe_rf0": 0.534,
+            "longest_underwater_trading_days": 291
+          },
+          "holdout": {
+            "total_return_pct": -0.441,
+            "cagr_pct": -0.441,
+            "max_drawdown_pct": -0.883,
+            "volatility_pct": 0.823,
+            "sharpe_rf0": -0.533,
+            "longest_underwater_trading_days": 161
+          },
+          "full": {
+            "total_return_pct": 1.314,
+            "cagr_pct": 0.437,
+            "max_drawdown_pct": -2.093,
+            "volatility_pct": 1.439,
+            "sharpe_rf0": 0.31,
+            "longest_underwater_trading_days": 543
+          },
+          "sleeve_pnl_initial100": -0.015,
+          "trades": 134,
+          "buy_count": 23,
+          "sell_count": 111,
+          "correction_exit_count": 17,
+          "cap_trim_count": 88,
+          "closing_gold_weight_pct": 33.108,
+          "gold_weight_exceed_15_days": 80,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S2_DONCHIAN55_20_ATR",
+          "start_date": "2015-08-20",
+          "end_date": "2018-09-21",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 1.773,
+            "cagr_pct": 0.885,
+            "max_drawdown_pct": -1.657,
+            "volatility_pct": 1.561,
+            "sharpe_rf0": 0.572,
+            "longest_underwater_trading_days": 291
+          },
+          "holdout": {
+            "total_return_pct": -0.557,
+            "cagr_pct": -0.557,
+            "max_drawdown_pct": -0.863,
+            "volatility_pct": 0.781,
+            "sharpe_rf0": -0.712,
+            "longest_underwater_trading_days": 249
+          },
+          "full": {
+            "total_return_pct": 1.206,
+            "cagr_pct": 0.401,
+            "max_drawdown_pct": -1.657,
+            "volatility_pct": 1.352,
+            "sharpe_rf0": 0.303,
+            "longest_underwater_trading_days": 543
+          },
+          "sleeve_pnl_initial100": -0.1223,
+          "trades": 47,
+          "buy_count": 9,
+          "sell_count": 38,
+          "correction_exit_count": 9,
+          "cap_trim_count": 29,
+          "closing_gold_weight_pct": 33.143,
+          "gold_weight_exceed_15_days": 21,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S3_MA50_200_ATR",
+          "start_date": "2015-08-20",
+          "end_date": "2018-09-21",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 1.706,
+            "cagr_pct": 0.851,
+            "max_drawdown_pct": -1.957,
+            "volatility_pct": 1.644,
+            "sharpe_rf0": 0.523,
+            "longest_underwater_trading_days": 291
+          },
+          "holdout": {
+            "total_return_pct": -0.529,
+            "cagr_pct": -0.529,
+            "max_drawdown_pct": -0.836,
+            "volatility_pct": 0.774,
+            "sharpe_rf0": -0.681,
+            "longest_underwater_trading_days": 249
+          },
+          "full": {
+            "total_return_pct": 1.167,
+            "cagr_pct": 0.388,
+            "max_drawdown_pct": -2.091,
+            "volatility_pct": 1.415,
+            "sharpe_rf0": 0.281,
+            "longest_underwater_trading_days": 543
+          },
+          "sleeve_pnl_initial100": -0.1614,
+          "trades": 86,
+          "buy_count": 18,
+          "sell_count": 68,
+          "correction_exit_count": 11,
+          "cap_trim_count": 50,
+          "closing_gold_weight_pct": 33.156,
+          "gold_weight_exceed_15_days": 49,
+          "core_alone_exceed_15_days": 0
+        }
+      ]
+    },
+    {
+      "window_id": 3,
+      "start": "2016-08-31",
+      "end": "2019-10-14",
+      "results": [
+        {
+          "policy": "B0_lump",
+          "start_date": "2016-08-31",
+          "end_date": "2019-10-14",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": -0.861,
+            "cagr_pct": -0.432,
+            "max_drawdown_pct": -1.63,
+            "volatility_pct": 1.26,
+            "sharpe_rf0": -0.337,
+            "longest_underwater_trading_days": 498
+          },
+          "holdout": {
+            "total_return_pct": 3.559,
+            "cagr_pct": 3.559,
+            "max_drawdown_pct": -0.881,
+            "volatility_pct": 1.887,
+            "sharpe_rf0": 1.863,
+            "longest_underwater_trading_days": 68
+          },
+          "full": {
+            "total_return_pct": 2.667,
+            "cagr_pct": 0.883,
+            "max_drawdown_pct": -1.63,
+            "volatility_pct": 1.502,
+            "sharpe_rf0": 0.592,
+            "longest_underwater_trading_days": 592
+          },
+          "sleeve_pnl_initial100": 0.7684,
+          "trades": 28,
+          "buy_count": 1,
+          "sell_count": 27,
+          "correction_exit_count": 0,
+          "cap_trim_count": 27,
+          "closing_gold_weight_pct": 33.395,
+          "gold_weight_exceed_15_days": 20,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "B1_DCA",
+          "start_date": "2016-08-31",
+          "end_date": "2019-10-14",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": -0.682,
+            "cagr_pct": -0.342,
+            "max_drawdown_pct": -1.369,
+            "volatility_pct": 1.182,
+            "sharpe_rf0": -0.284,
+            "longest_underwater_trading_days": 356
+          },
+          "holdout": {
+            "total_return_pct": 3.569,
+            "cagr_pct": 3.569,
+            "max_drawdown_pct": -0.881,
+            "volatility_pct": 1.888,
+            "sharpe_rf0": 1.867,
+            "longest_underwater_trading_days": 68
+          },
+          "full": {
+            "total_return_pct": 2.863,
+            "cagr_pct": 0.947,
+            "max_drawdown_pct": -1.369,
+            "volatility_pct": 1.46,
+            "sharpe_rf0": 0.653,
+            "longest_underwater_trading_days": 421
+          },
+          "sleeve_pnl_initial100": 0.9771,
+          "trades": 39,
+          "buy_count": 6,
+          "sell_count": 33,
+          "correction_exit_count": 0,
+          "cap_trim_count": 33,
+          "closing_gold_weight_pct": 33.395,
+          "gold_weight_exceed_15_days": 20,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "B2_cash",
+          "start_date": "2016-08-31",
+          "end_date": "2019-10-14",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": -0.586,
+            "cagr_pct": -0.294,
+            "max_drawdown_pct": -1.107,
+            "volatility_pct": 0.853,
+            "sharpe_rf0": -0.341,
+            "longest_underwater_trading_days": 498
+          },
+          "holdout": {
+            "total_return_pct": 2.484,
+            "cagr_pct": 2.484,
+            "max_drawdown_pct": -0.719,
+            "volatility_pct": 1.406,
+            "sharpe_rf0": 1.752,
+            "longest_underwater_trading_days": 68
+          },
+          "full": {
+            "total_return_pct": 1.883,
+            "cagr_pct": 0.625,
+            "max_drawdown_pct": -1.107,
+            "volatility_pct": 1.072,
+            "sharpe_rf0": 0.586,
+            "longest_underwater_trading_days": 592
+          },
+          "sleeve_pnl_initial100": 0.0,
+          "trades": 0,
+          "buy_count": 0,
+          "sell_count": 0,
+          "correction_exit_count": 0,
+          "cap_trim_count": 0,
+          "closing_gold_weight_pct": 27.224,
+          "gold_weight_exceed_15_days": 0,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S1_TSMOM252",
+          "start_date": "2016-08-31",
+          "end_date": "2019-10-14",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": -0.937,
+            "cagr_pct": -0.47,
+            "max_drawdown_pct": -1.63,
+            "volatility_pct": 1.164,
+            "sharpe_rf0": -0.399,
+            "longest_underwater_trading_days": 498
+          },
+          "holdout": {
+            "total_return_pct": 3.19,
+            "cagr_pct": 3.19,
+            "max_drawdown_pct": -0.881,
+            "volatility_pct": 1.866,
+            "sharpe_rf0": 1.692,
+            "longest_underwater_trading_days": 68
+          },
+          "full": {
+            "total_return_pct": 2.223,
+            "cagr_pct": 0.737,
+            "max_drawdown_pct": -1.63,
+            "volatility_pct": 1.44,
+            "sharpe_rf0": 0.517,
+            "longest_underwater_trading_days": 668
+          },
+          "sleeve_pnl_initial100": 0.3246,
+          "trades": 54,
+          "buy_count": 15,
+          "sell_count": 39,
+          "correction_exit_count": 0,
+          "cap_trim_count": 25,
+          "closing_gold_weight_pct": 33.395,
+          "gold_weight_exceed_15_days": 19,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S2_DONCHIAN55_20",
+          "start_date": "2016-08-31",
+          "end_date": "2019-10-14",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": -0.923,
+            "cagr_pct": -0.464,
+            "max_drawdown_pct": -1.369,
+            "volatility_pct": 0.928,
+            "sharpe_rf0": -0.496,
+            "longest_underwater_trading_days": 498
+          },
+          "holdout": {
+            "total_return_pct": 3.114,
+            "cagr_pct": 3.114,
+            "max_drawdown_pct": -0.881,
+            "volatility_pct": 1.812,
+            "sharpe_rf0": 1.701,
+            "longest_underwater_trading_days": 69
+          },
+          "full": {
+            "total_return_pct": 2.162,
+            "cagr_pct": 0.717,
+            "max_drawdown_pct": -1.369,
+            "volatility_pct": 1.295,
+            "sharpe_rf0": 0.558,
+            "longest_underwater_trading_days": 667
+          },
+          "sleeve_pnl_initial100": 0.2793,
+          "trades": 40,
+          "buy_count": 7,
+          "sell_count": 33,
+          "correction_exit_count": 0,
+          "cap_trim_count": 27,
+          "closing_gold_weight_pct": 33.395,
+          "gold_weight_exceed_15_days": 15,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S3_MA50_200",
+          "start_date": "2016-08-31",
+          "end_date": "2019-10-14",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": -1.247,
+            "cagr_pct": -0.627,
+            "max_drawdown_pct": -1.808,
+            "volatility_pct": 1.074,
+            "sharpe_rf0": -0.58,
+            "longest_underwater_trading_days": 498
+          },
+          "holdout": {
+            "total_return_pct": 3.458,
+            "cagr_pct": 3.458,
+            "max_drawdown_pct": -0.881,
+            "volatility_pct": 1.861,
+            "sharpe_rf0": 1.837,
+            "longest_underwater_trading_days": 68
+          },
+          "full": {
+            "total_return_pct": 2.168,
+            "cagr_pct": 0.718,
+            "max_drawdown_pct": -1.808,
+            "volatility_pct": 1.391,
+            "sharpe_rf0": 0.522,
+            "longest_underwater_trading_days": 669
+          },
+          "sleeve_pnl_initial100": 0.2692,
+          "trades": 48,
+          "buy_count": 12,
+          "sell_count": 36,
+          "correction_exit_count": 0,
+          "cap_trim_count": 25,
+          "closing_gold_weight_pct": 33.395,
+          "gold_weight_exceed_15_days": 19,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S1_TSMOM252_ATR",
+          "start_date": "2016-08-31",
+          "end_date": "2019-10-14",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": -1.033,
+            "cagr_pct": -0.519,
+            "max_drawdown_pct": -1.802,
+            "volatility_pct": 1.123,
+            "sharpe_rf0": -0.458,
+            "longest_underwater_trading_days": 498
+          },
+          "holdout": {
+            "total_return_pct": 3.308,
+            "cagr_pct": 3.308,
+            "max_drawdown_pct": -0.828,
+            "volatility_pct": 1.808,
+            "sharpe_rf0": 1.81,
+            "longest_underwater_trading_days": 68
+          },
+          "full": {
+            "total_return_pct": 2.241,
+            "cagr_pct": 0.743,
+            "max_drawdown_pct": -1.802,
+            "volatility_pct": 1.393,
+            "sharpe_rf0": 0.538,
+            "longest_underwater_trading_days": 668
+          },
+          "sleeve_pnl_initial100": 0.3426,
+          "trades": 91,
+          "buy_count": 31,
+          "sell_count": 60,
+          "correction_exit_count": 20,
+          "cap_trim_count": 29,
+          "closing_gold_weight_pct": 27.132,
+          "gold_weight_exceed_15_days": 25,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S2_DONCHIAN55_20_ATR",
+          "start_date": "2016-08-31",
+          "end_date": "2019-10-14",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": -0.677,
+            "cagr_pct": -0.34,
+            "max_drawdown_pct": -1.169,
+            "volatility_pct": 0.905,
+            "sharpe_rf0": -0.372,
+            "longest_underwater_trading_days": 356
+          },
+          "holdout": {
+            "total_return_pct": 2.871,
+            "cagr_pct": 2.871,
+            "max_drawdown_pct": -0.821,
+            "volatility_pct": 1.655,
+            "sharpe_rf0": 1.718,
+            "longest_underwater_trading_days": 69
+          },
+          "full": {
+            "total_return_pct": 2.174,
+            "cagr_pct": 0.72,
+            "max_drawdown_pct": -1.169,
+            "volatility_pct": 1.211,
+            "sharpe_rf0": 0.599,
+            "longest_underwater_trading_days": 450
+          },
+          "sleeve_pnl_initial100": 0.2909,
+          "trades": 41,
+          "buy_count": 9,
+          "sell_count": 32,
+          "correction_exit_count": 9,
+          "cap_trim_count": 23,
+          "closing_gold_weight_pct": 27.146,
+          "gold_weight_exceed_15_days": 20,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S3_MA50_200_ATR",
+          "start_date": "2016-08-31",
+          "end_date": "2019-10-14",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": -1.306,
+            "cagr_pct": -0.657,
+            "max_drawdown_pct": -1.867,
+            "volatility_pct": 1.06,
+            "sharpe_rf0": -0.616,
+            "longest_underwater_trading_days": 498
+          },
+          "holdout": {
+            "total_return_pct": 3.574,
+            "cagr_pct": 3.574,
+            "max_drawdown_pct": -0.828,
+            "volatility_pct": 1.803,
+            "sharpe_rf0": 1.957,
+            "longest_underwater_trading_days": 68
+          },
+          "full": {
+            "total_return_pct": 2.221,
+            "cagr_pct": 0.736,
+            "max_drawdown_pct": -1.867,
+            "volatility_pct": 1.359,
+            "sharpe_rf0": 0.546,
+            "longest_underwater_trading_days": 669
+          },
+          "sleeve_pnl_initial100": 0.322,
+          "trades": 69,
+          "buy_count": 20,
+          "sell_count": 49,
+          "correction_exit_count": 13,
+          "cap_trim_count": 29,
+          "closing_gold_weight_pct": 27.138,
+          "gold_weight_exceed_15_days": 24,
+          "core_alone_exceed_15_days": 0
+        }
+      ]
+    },
+    {
+      "window_id": 4,
+      "start": "2017-09-13",
+      "end": "2020-10-27",
+      "results": [
+        {
+          "policy": "B0_lump",
+          "start_date": "2017-09-13",
+          "end_date": "2020-10-27",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 2.944,
+            "cagr_pct": 1.464,
+            "max_drawdown_pct": -1.002,
+            "volatility_pct": 1.513,
+            "sharpe_rf0": 0.969,
+            "longest_underwater_trading_days": 219
+          },
+          "holdout": {
+            "total_return_pct": 2.631,
+            "cagr_pct": 2.631,
+            "max_drawdown_pct": -1.891,
+            "volatility_pct": 2.625,
+            "sharpe_rf0": 1.003,
+            "longest_underwater_trading_days": 51
+          },
+          "full": {
+            "total_return_pct": 5.652,
+            "cagr_pct": 1.852,
+            "max_drawdown_pct": -1.891,
+            "volatility_pct": 1.954,
+            "sharpe_rf0": 0.949,
+            "longest_underwater_trading_days": 219
+          },
+          "sleeve_pnl_initial100": 1.3261,
+          "trades": 58,
+          "buy_count": 1,
+          "sell_count": 57,
+          "correction_exit_count": 0,
+          "cap_trim_count": 57,
+          "closing_gold_weight_pct": 27.154,
+          "gold_weight_exceed_15_days": 39,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "B1_DCA",
+          "start_date": "2017-09-13",
+          "end_date": "2020-10-27",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 3.02,
+            "cagr_pct": 1.502,
+            "max_drawdown_pct": -0.986,
+            "volatility_pct": 1.49,
+            "sharpe_rf0": 1.008,
+            "longest_underwater_trading_days": 219
+          },
+          "holdout": {
+            "total_return_pct": 2.631,
+            "cagr_pct": 2.631,
+            "max_drawdown_pct": -1.891,
+            "volatility_pct": 2.625,
+            "sharpe_rf0": 1.003,
+            "longest_underwater_trading_days": 51
+          },
+          "full": {
+            "total_return_pct": 5.731,
+            "cagr_pct": 1.877,
+            "max_drawdown_pct": -1.891,
+            "volatility_pct": 1.942,
+            "sharpe_rf0": 0.967,
+            "longest_underwater_trading_days": 219
+          },
+          "sleeve_pnl_initial100": 1.4108,
+          "trades": 64,
+          "buy_count": 6,
+          "sell_count": 58,
+          "correction_exit_count": 0,
+          "cap_trim_count": 58,
+          "closing_gold_weight_pct": 27.154,
+          "gold_weight_exceed_15_days": 41,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "B2_cash",
+          "start_date": "2017-09-13",
+          "end_date": "2020-10-27",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 2.1,
+            "cagr_pct": 1.047,
+            "max_drawdown_pct": -0.732,
+            "volatility_pct": 1.117,
+            "sharpe_rf0": 0.938,
+            "longest_underwater_trading_days": 219
+          },
+          "holdout": {
+            "total_return_pct": 2.173,
+            "cagr_pct": 2.173,
+            "max_drawdown_pct": -1.692,
+            "volatility_pct": 2.368,
+            "sharpe_rf0": 0.92,
+            "longest_underwater_trading_days": 51
+          },
+          "full": {
+            "total_return_pct": 4.319,
+            "cagr_pct": 1.421,
+            "max_drawdown_pct": -1.692,
+            "volatility_pct": 1.643,
+            "sharpe_rf0": 0.867,
+            "longest_underwater_trading_days": 219
+          },
+          "sleeve_pnl_initial100": 0.0,
+          "trades": 0,
+          "buy_count": 0,
+          "sell_count": 0,
+          "correction_exit_count": 0,
+          "cap_trim_count": 0,
+          "closing_gold_weight_pct": 27.11,
+          "gold_weight_exceed_15_days": 0,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S1_TSMOM252",
+          "start_date": "2017-09-13",
+          "end_date": "2020-10-27",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 2.626,
+            "cagr_pct": 1.307,
+            "max_drawdown_pct": -0.92,
+            "volatility_pct": 1.437,
+            "sharpe_rf0": 0.911,
+            "longest_underwater_trading_days": 226
+          },
+          "holdout": {
+            "total_return_pct": 2.631,
+            "cagr_pct": 2.631,
+            "max_drawdown_pct": -1.891,
+            "volatility_pct": 2.625,
+            "sharpe_rf0": 1.003,
+            "longest_underwater_trading_days": 51
+          },
+          "full": {
+            "total_return_pct": 5.326,
+            "cagr_pct": 1.747,
+            "max_drawdown_pct": -1.891,
+            "volatility_pct": 1.916,
+            "sharpe_rf0": 0.914,
+            "longest_underwater_trading_days": 226
+          },
+          "sleeve_pnl_initial100": 1.0075,
+          "trades": 77,
+          "buy_count": 13,
+          "sell_count": 64,
+          "correction_exit_count": 0,
+          "cap_trim_count": 52,
+          "closing_gold_weight_pct": 27.154,
+          "gold_weight_exceed_15_days": 37,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S2_DONCHIAN55_20",
+          "start_date": "2017-09-13",
+          "end_date": "2020-10-27",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 2.585,
+            "cagr_pct": 1.287,
+            "max_drawdown_pct": -0.881,
+            "volatility_pct": 1.378,
+            "sharpe_rf0": 0.935,
+            "longest_underwater_trading_days": 221
+          },
+          "holdout": {
+            "total_return_pct": 2.304,
+            "cagr_pct": 2.304,
+            "max_drawdown_pct": -1.891,
+            "volatility_pct": 2.533,
+            "sharpe_rf0": 0.912,
+            "longest_underwater_trading_days": 53
+          },
+          "full": {
+            "total_return_pct": 4.948,
+            "cagr_pct": 1.625,
+            "max_drawdown_pct": -1.891,
+            "volatility_pct": 1.844,
+            "sharpe_rf0": 0.883,
+            "longest_underwater_trading_days": 221
+          },
+          "sleeve_pnl_initial100": 0.629,
+          "trades": 62,
+          "buy_count": 6,
+          "sell_count": 56,
+          "correction_exit_count": 0,
+          "cap_trim_count": 50,
+          "closing_gold_weight_pct": 26.948,
+          "gold_weight_exceed_15_days": 36,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S3_MA50_200",
+          "start_date": "2017-09-13",
+          "end_date": "2020-10-27",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 2.98,
+            "cagr_pct": 1.482,
+            "max_drawdown_pct": -0.881,
+            "volatility_pct": 1.416,
+            "sharpe_rf0": 1.046,
+            "longest_underwater_trading_days": 307
+          },
+          "holdout": {
+            "total_return_pct": 2.79,
+            "cagr_pct": 2.79,
+            "max_drawdown_pct": -1.891,
+            "volatility_pct": 2.656,
+            "sharpe_rf0": 1.049,
+            "longest_underwater_trading_days": 51
+          },
+          "full": {
+            "total_return_pct": 5.853,
+            "cagr_pct": 1.917,
+            "max_drawdown_pct": -1.891,
+            "volatility_pct": 1.919,
+            "sharpe_rf0": 0.999,
+            "longest_underwater_trading_days": 307
+          },
+          "sleeve_pnl_initial100": 1.5273,
+          "trades": 73,
+          "buy_count": 6,
+          "sell_count": 67,
+          "correction_exit_count": 0,
+          "cap_trim_count": 62,
+          "closing_gold_weight_pct": 27.154,
+          "gold_weight_exceed_15_days": 42,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S1_TSMOM252_ATR",
+          "start_date": "2017-09-13",
+          "end_date": "2020-10-27",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 2.937,
+            "cagr_pct": 1.461,
+            "max_drawdown_pct": -0.831,
+            "volatility_pct": 1.394,
+            "sharpe_rf0": 1.047,
+            "longest_underwater_trading_days": 226
+          },
+          "holdout": {
+            "total_return_pct": 2.459,
+            "cagr_pct": 2.459,
+            "max_drawdown_pct": -1.945,
+            "volatility_pct": 2.576,
+            "sharpe_rf0": 0.956,
+            "longest_underwater_trading_days": 54
+          },
+          "full": {
+            "total_return_pct": 5.468,
+            "cagr_pct": 1.793,
+            "max_drawdown_pct": -1.945,
+            "volatility_pct": 1.872,
+            "sharpe_rf0": 0.959,
+            "longest_underwater_trading_days": 226
+          },
+          "sleeve_pnl_initial100": 1.1493,
+          "trades": 175,
+          "buy_count": 28,
+          "sell_count": 147,
+          "correction_exit_count": 18,
+          "cap_trim_count": 120,
+          "closing_gold_weight_pct": 29.357,
+          "gold_weight_exceed_15_days": 94,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S2_DONCHIAN55_20_ATR",
+          "start_date": "2017-09-13",
+          "end_date": "2020-10-27",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 2.372,
+            "cagr_pct": 1.181,
+            "max_drawdown_pct": -0.826,
+            "volatility_pct": 1.275,
+            "sharpe_rf0": 0.927,
+            "longest_underwater_trading_days": 220
+          },
+          "holdout": {
+            "total_return_pct": 2.233,
+            "cagr_pct": 2.233,
+            "max_drawdown_pct": -1.74,
+            "volatility_pct": 2.446,
+            "sharpe_rf0": 0.915,
+            "longest_underwater_trading_days": 51
+          },
+          "full": {
+            "total_return_pct": 4.658,
+            "cagr_pct": 1.531,
+            "max_drawdown_pct": -1.74,
+            "volatility_pct": 1.754,
+            "sharpe_rf0": 0.875,
+            "longest_underwater_trading_days": 220
+          },
+          "sleeve_pnl_initial100": 0.3394,
+          "trades": 61,
+          "buy_count": 10,
+          "sell_count": 51,
+          "correction_exit_count": 10,
+          "cap_trim_count": 41,
+          "closing_gold_weight_pct": 27.023,
+          "gold_weight_exceed_15_days": 35,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S3_MA50_200_ATR",
+          "start_date": "2017-09-13",
+          "end_date": "2020-10-27",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 3.11,
+            "cagr_pct": 1.546,
+            "max_drawdown_pct": -0.83,
+            "volatility_pct": 1.374,
+            "sharpe_rf0": 1.123,
+            "longest_underwater_trading_days": 307
+          },
+          "holdout": {
+            "total_return_pct": 2.458,
+            "cagr_pct": 2.458,
+            "max_drawdown_pct": -1.945,
+            "volatility_pct": 2.576,
+            "sharpe_rf0": 0.956,
+            "longest_underwater_trading_days": 54
+          },
+          "full": {
+            "total_return_pct": 5.644,
+            "cagr_pct": 1.849,
+            "max_drawdown_pct": -1.945,
+            "volatility_pct": 1.862,
+            "sharpe_rf0": 0.994,
+            "longest_underwater_trading_days": 307
+          },
+          "sleeve_pnl_initial100": 1.3179,
+          "trades": 160,
+          "buy_count": 19,
+          "sell_count": 141,
+          "correction_exit_count": 16,
+          "cap_trim_count": 123,
+          "closing_gold_weight_pct": 29.357,
+          "gold_weight_exceed_15_days": 93,
+          "core_alone_exceed_15_days": 0
+        }
+      ]
+    },
+    {
+      "window_id": 5,
+      "start": "2018-09-25",
+      "end": "2021-11-09",
+      "results": [
+        {
+          "policy": "B0_lump",
+          "start_date": "2018-09-25",
+          "end_date": "2021-11-09",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 6.345,
+            "cagr_pct": 3.13,
+            "max_drawdown_pct": -1.891,
+            "volatility_pct": 2.299,
+            "sharpe_rf0": 1.352,
+            "longest_underwater_trading_days": 111
+          },
+          "holdout": {
+            "total_return_pct": -1.068,
+            "cagr_pct": -1.068,
+            "max_drawdown_pct": -1.839,
+            "volatility_pct": 1.711,
+            "sharpe_rf0": -0.619,
+            "longest_underwater_trading_days": 244
+          },
+          "full": {
+            "total_return_pct": 5.21,
+            "cagr_pct": 1.71,
+            "max_drawdown_pct": -3.134,
+            "volatility_pct": 2.123,
+            "sharpe_rf0": 0.809,
+            "longest_underwater_trading_days": 303
+          },
+          "sleeve_pnl_initial100": 1.3504,
+          "trades": 63,
+          "buy_count": 1,
+          "sell_count": 62,
+          "correction_exit_count": 0,
+          "cap_trim_count": 62,
+          "closing_gold_weight_pct": 28.159,
+          "gold_weight_exceed_15_days": 51,
+          "core_alone_exceed_15_days": 6
+        },
+        {
+          "policy": "B1_DCA",
+          "start_date": "2018-09-25",
+          "end_date": "2021-11-09",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 6.144,
+            "cagr_pct": 3.032,
+            "max_drawdown_pct": -1.891,
+            "volatility_pct": 2.288,
+            "sharpe_rf0": 1.317,
+            "longest_underwater_trading_days": 111
+          },
+          "holdout": {
+            "total_return_pct": -1.07,
+            "cagr_pct": -1.07,
+            "max_drawdown_pct": -1.843,
+            "volatility_pct": 1.714,
+            "sharpe_rf0": -0.619,
+            "longest_underwater_trading_days": 244
+          },
+          "full": {
+            "total_return_pct": 5.008,
+            "cagr_pct": 1.645,
+            "max_drawdown_pct": -3.14,
+            "volatility_pct": 2.116,
+            "sharpe_rf0": 0.781,
+            "longest_underwater_trading_days": 303
+          },
+          "sleeve_pnl_initial100": 1.1518,
+          "trades": 61,
+          "buy_count": 6,
+          "sell_count": 55,
+          "correction_exit_count": 0,
+          "cap_trim_count": 55,
+          "closing_gold_weight_pct": 28.212,
+          "gold_weight_exceed_15_days": 42,
+          "core_alone_exceed_15_days": 6
+        },
+        {
+          "policy": "B2_cash",
+          "start_date": "2018-09-25",
+          "end_date": "2021-11-09",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 4.992,
+            "cagr_pct": 2.47,
+            "max_drawdown_pct": -1.76,
+            "volatility_pct": 2.037,
+            "sharpe_rf0": 1.208,
+            "longest_underwater_trading_days": 111
+          },
+          "holdout": {
+            "total_return_pct": -1.082,
+            "cagr_pct": -1.082,
+            "max_drawdown_pct": -1.863,
+            "volatility_pct": 1.733,
+            "sharpe_rf0": -0.619,
+            "longest_underwater_trading_days": 244
+          },
+          "full": {
+            "total_return_pct": 3.856,
+            "cagr_pct": 1.271,
+            "max_drawdown_pct": -3.173,
+            "volatility_pct": 1.943,
+            "sharpe_rf0": 0.66,
+            "longest_underwater_trading_days": 303
+          },
+          "sleeve_pnl_initial100": 0.0,
+          "trades": 0,
+          "buy_count": 0,
+          "sell_count": 0,
+          "correction_exit_count": 0,
+          "cap_trim_count": 0,
+          "closing_gold_weight_pct": 28.525,
+          "gold_weight_exceed_15_days": 7,
+          "core_alone_exceed_15_days": 11
+        },
+        {
+          "policy": "S1_TSMOM252",
+          "start_date": "2018-09-25",
+          "end_date": "2021-11-09",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 5.953,
+            "cagr_pct": 2.94,
+            "max_drawdown_pct": -1.891,
+            "volatility_pct": 2.296,
+            "sharpe_rf0": 1.273,
+            "longest_underwater_trading_days": 111
+          },
+          "holdout": {
+            "total_return_pct": -1.039,
+            "cagr_pct": -1.039,
+            "max_drawdown_pct": -1.86,
+            "volatility_pct": 1.75,
+            "sharpe_rf0": -0.588,
+            "longest_underwater_trading_days": 244
+          },
+          "full": {
+            "total_return_pct": 4.853,
+            "cagr_pct": 1.594,
+            "max_drawdown_pct": -3.145,
+            "volatility_pct": 2.131,
+            "sharpe_rf0": 0.753,
+            "longest_underwater_trading_days": 303
+          },
+          "sleeve_pnl_initial100": 0.9968,
+          "trades": 102,
+          "buy_count": 15,
+          "sell_count": 87,
+          "correction_exit_count": 0,
+          "cap_trim_count": 74,
+          "closing_gold_weight_pct": 28.254,
+          "gold_weight_exceed_15_days": 55,
+          "core_alone_exceed_15_days": 6
+        },
+        {
+          "policy": "S2_DONCHIAN55_20",
+          "start_date": "2018-09-25",
+          "end_date": "2021-11-09",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 5.626,
+            "cagr_pct": 2.78,
+            "max_drawdown_pct": -1.891,
+            "volatility_pct": 2.231,
+            "sharpe_rf0": 1.24,
+            "longest_underwater_trading_days": 112
+          },
+          "holdout": {
+            "total_return_pct": -1.13,
+            "cagr_pct": -1.13,
+            "max_drawdown_pct": -1.852,
+            "volatility_pct": 1.738,
+            "sharpe_rf0": -0.645,
+            "longest_underwater_trading_days": 244
+          },
+          "full": {
+            "total_return_pct": 4.432,
+            "cagr_pct": 1.458,
+            "max_drawdown_pct": -3.155,
+            "volatility_pct": 2.082,
+            "sharpe_rf0": 0.706,
+            "longest_underwater_trading_days": 303
+          },
+          "sleeve_pnl_initial100": 0.5764,
+          "trades": 68,
+          "buy_count": 6,
+          "sell_count": 62,
+          "correction_exit_count": 0,
+          "cap_trim_count": 57,
+          "closing_gold_weight_pct": 28.367,
+          "gold_weight_exceed_15_days": 45,
+          "core_alone_exceed_15_days": 6
+        },
+        {
+          "policy": "S3_MA50_200",
+          "start_date": "2018-09-25",
+          "end_date": "2021-11-09",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 6.401,
+            "cagr_pct": 3.157,
+            "max_drawdown_pct": -1.891,
+            "volatility_pct": 2.311,
+            "sharpe_rf0": 1.357,
+            "longest_underwater_trading_days": 111
+          },
+          "holdout": {
+            "total_return_pct": -1.095,
+            "cagr_pct": -1.095,
+            "max_drawdown_pct": -1.867,
+            "volatility_pct": 1.715,
+            "sharpe_rf0": -0.633,
+            "longest_underwater_trading_days": 244
+          },
+          "full": {
+            "total_return_pct": 5.236,
+            "cagr_pct": 1.718,
+            "max_drawdown_pct": -3.148,
+            "volatility_pct": 2.133,
+            "sharpe_rf0": 0.809,
+            "longest_underwater_trading_days": 303
+          },
+          "sleeve_pnl_initial100": 1.3799,
+          "trades": 84,
+          "buy_count": 6,
+          "sell_count": 78,
+          "correction_exit_count": 0,
+          "cap_trim_count": 74,
+          "closing_gold_weight_pct": 28.151,
+          "gold_weight_exceed_15_days": 56,
+          "core_alone_exceed_15_days": 6
+        },
+        {
+          "policy": "S1_TSMOM252_ATR",
+          "start_date": "2018-09-25",
+          "end_date": "2021-11-09",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 5.947,
+            "cagr_pct": 2.937,
+            "max_drawdown_pct": -1.939,
+            "volatility_pct": 2.258,
+            "sharpe_rf0": 1.293,
+            "longest_underwater_trading_days": 110
+          },
+          "holdout": {
+            "total_return_pct": -1.176,
+            "cagr_pct": -1.176,
+            "max_drawdown_pct": -1.984,
+            "volatility_pct": 1.794,
+            "sharpe_rf0": -0.651,
+            "longest_underwater_trading_days": 244
+          },
+          "full": {
+            "total_return_pct": 4.701,
+            "cagr_pct": 1.545,
+            "max_drawdown_pct": -3.278,
+            "volatility_pct": 2.117,
+            "sharpe_rf0": 0.735,
+            "longest_underwater_trading_days": 303
+          },
+          "sleeve_pnl_initial100": 0.8449,
+          "trades": 218,
+          "buy_count": 35,
+          "sell_count": 183,
+          "correction_exit_count": 22,
+          "cap_trim_count": 150,
+          "closing_gold_weight_pct": 28.295,
+          "gold_weight_exceed_15_days": 121,
+          "core_alone_exceed_15_days": 6
+        },
+        {
+          "policy": "S2_DONCHIAN55_20_ATR",
+          "start_date": "2018-09-25",
+          "end_date": "2021-11-09",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 5.351,
+            "cagr_pct": 2.646,
+            "max_drawdown_pct": -1.779,
+            "volatility_pct": 2.143,
+            "sharpe_rf0": 1.23,
+            "longest_underwater_trading_days": 112
+          },
+          "holdout": {
+            "total_return_pct": -1.092,
+            "cagr_pct": -1.092,
+            "max_drawdown_pct": -1.857,
+            "volatility_pct": 1.735,
+            "sharpe_rf0": -0.624,
+            "longest_underwater_trading_days": 244
+          },
+          "full": {
+            "total_return_pct": 4.201,
+            "cagr_pct": 1.383,
+            "max_drawdown_pct": -3.163,
+            "volatility_pct": 2.018,
+            "sharpe_rf0": 0.691,
+            "longest_underwater_trading_days": 303
+          },
+          "sleeve_pnl_initial100": 0.3454,
+          "trades": 65,
+          "buy_count": 10,
+          "sell_count": 55,
+          "correction_exit_count": 9,
+          "cap_trim_count": 46,
+          "closing_gold_weight_pct": 28.43,
+          "gold_weight_exceed_15_days": 43,
+          "core_alone_exceed_15_days": 6
+        },
+        {
+          "policy": "S3_MA50_200_ATR",
+          "start_date": "2018-09-25",
+          "end_date": "2021-11-09",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 6.236,
+            "cagr_pct": 3.077,
+            "max_drawdown_pct": -1.94,
+            "volatility_pct": 2.254,
+            "sharpe_rf0": 1.356,
+            "longest_underwater_trading_days": 110
+          },
+          "holdout": {
+            "total_return_pct": -1.135,
+            "cagr_pct": -1.135,
+            "max_drawdown_pct": -1.895,
+            "volatility_pct": 1.723,
+            "sharpe_rf0": -0.654,
+            "longest_underwater_trading_days": 244
+          },
+          "full": {
+            "total_return_pct": 5.03,
+            "cagr_pct": 1.651,
+            "max_drawdown_pct": -3.187,
+            "volatility_pct": 2.094,
+            "sharpe_rf0": 0.792,
+            "longest_underwater_trading_days": 303
+          },
+          "sleeve_pnl_initial100": 1.1736,
+          "trades": 171,
+          "buy_count": 21,
+          "sell_count": 150,
+          "correction_exit_count": 18,
+          "cap_trim_count": 131,
+          "closing_gold_weight_pct": 28.206,
+          "gold_weight_exceed_15_days": 106,
+          "core_alone_exceed_15_days": 6
+        }
+      ]
+    },
+    {
+      "window_id": 6,
+      "start": "2019-10-15",
+      "end": "2022-11-22",
+      "results": [
+        {
+          "policy": "B0_lump",
+          "start_date": "2019-10-15",
+          "end_date": "2022-11-22",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 1.559,
+            "cagr_pct": 0.778,
+            "max_drawdown_pct": -3.056,
+            "volatility_pct": 2.208,
+            "sharpe_rf0": 0.362,
+            "longest_underwater_trading_days": 303
+          },
+          "holdout": {
+            "total_return_pct": 0.912,
+            "cagr_pct": 0.912,
+            "max_drawdown_pct": -1.593,
+            "volatility_pct": 1.57,
+            "sharpe_rf0": 0.586,
+            "longest_underwater_trading_days": 172
+          },
+          "full": {
+            "total_return_pct": 2.485,
+            "cagr_pct": 0.823,
+            "max_drawdown_pct": -3.056,
+            "volatility_pct": 2.016,
+            "sharpe_rf0": 0.416,
+            "longest_underwater_trading_days": 555
+          },
+          "sleeve_pnl_initial100": 0.7896,
+          "trades": 31,
+          "buy_count": 1,
+          "sell_count": 30,
+          "correction_exit_count": 0,
+          "cap_trim_count": 30,
+          "closing_gold_weight_pct": 27.192,
+          "gold_weight_exceed_15_days": 24,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "B1_DCA",
+          "start_date": "2019-10-15",
+          "end_date": "2022-11-22",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 1.581,
+            "cagr_pct": 0.789,
+            "max_drawdown_pct": -3.056,
+            "volatility_pct": 2.176,
+            "sharpe_rf0": 0.372,
+            "longest_underwater_trading_days": 303
+          },
+          "holdout": {
+            "total_return_pct": 0.912,
+            "cagr_pct": 0.912,
+            "max_drawdown_pct": -1.593,
+            "volatility_pct": 1.57,
+            "sharpe_rf0": 0.586,
+            "longest_underwater_trading_days": 172
+          },
+          "full": {
+            "total_return_pct": 2.508,
+            "cagr_pct": 0.83,
+            "max_drawdown_pct": -3.056,
+            "volatility_pct": 1.993,
+            "sharpe_rf0": 0.425,
+            "longest_underwater_trading_days": 555
+          },
+          "sleeve_pnl_initial100": 0.8163,
+          "trades": 33,
+          "buy_count": 6,
+          "sell_count": 27,
+          "correction_exit_count": 0,
+          "cap_trim_count": 27,
+          "closing_gold_weight_pct": 27.192,
+          "gold_weight_exceed_15_days": 17,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "B2_cash",
+          "start_date": "2019-10-15",
+          "end_date": "2022-11-22",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 0.915,
+            "cagr_pct": 0.457,
+            "max_drawdown_pct": -2.584,
+            "volatility_pct": 1.73,
+            "sharpe_rf0": 0.272,
+            "longest_underwater_trading_days": 303
+          },
+          "holdout": {
+            "total_return_pct": 0.768,
+            "cagr_pct": 0.768,
+            "max_drawdown_pct": -1.345,
+            "volatility_pct": 1.323,
+            "sharpe_rf0": 0.585,
+            "longest_underwater_trading_days": 172
+          },
+          "full": {
+            "total_return_pct": 1.69,
+            "cagr_pct": 0.561,
+            "max_drawdown_pct": -2.584,
+            "volatility_pct": 1.605,
+            "sharpe_rf0": 0.357,
+            "longest_underwater_trading_days": 555
+          },
+          "sleeve_pnl_initial100": 0.0,
+          "trades": 0,
+          "buy_count": 0,
+          "sell_count": 0,
+          "correction_exit_count": 0,
+          "cap_trim_count": 0,
+          "closing_gold_weight_pct": 22.939,
+          "gold_weight_exceed_15_days": 0,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S1_TSMOM252",
+          "start_date": "2019-10-15",
+          "end_date": "2022-11-22",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 1.575,
+            "cagr_pct": 0.786,
+            "max_drawdown_pct": -3.068,
+            "volatility_pct": 2.181,
+            "sharpe_rf0": 0.37,
+            "longest_underwater_trading_days": 303
+          },
+          "holdout": {
+            "total_return_pct": 0.838,
+            "cagr_pct": 0.838,
+            "max_drawdown_pct": -1.727,
+            "volatility_pct": 1.63,
+            "sharpe_rf0": 0.52,
+            "longest_underwater_trading_days": 172
+          },
+          "full": {
+            "total_return_pct": 2.425,
+            "cagr_pct": 0.803,
+            "max_drawdown_pct": -3.068,
+            "volatility_pct": 2.013,
+            "sharpe_rf0": 0.408,
+            "longest_underwater_trading_days": 555
+          },
+          "sleeve_pnl_initial100": 0.7299,
+          "trades": 80,
+          "buy_count": 11,
+          "sell_count": 69,
+          "correction_exit_count": 0,
+          "cap_trim_count": 59,
+          "closing_gold_weight_pct": 29.666,
+          "gold_weight_exceed_15_days": 43,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S2_DONCHIAN55_20",
+          "start_date": "2019-10-15",
+          "end_date": "2022-11-22",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 0.916,
+            "cagr_pct": 0.458,
+            "max_drawdown_pct": -2.79,
+            "volatility_pct": 2.019,
+            "sharpe_rf0": 0.236,
+            "longest_underwater_trading_days": 303
+          },
+          "holdout": {
+            "total_return_pct": 0.814,
+            "cagr_pct": 0.814,
+            "max_drawdown_pct": -1.497,
+            "volatility_pct": 1.552,
+            "sharpe_rf0": 0.53,
+            "longest_underwater_trading_days": 172
+          },
+          "full": {
+            "total_return_pct": 1.738,
+            "cagr_pct": 0.577,
+            "max_drawdown_pct": -2.955,
+            "volatility_pct": 1.875,
+            "sharpe_rf0": 0.316,
+            "longest_underwater_trading_days": 555
+          },
+          "sleeve_pnl_initial100": 0.0475,
+          "trades": 50,
+          "buy_count": 6,
+          "sell_count": 44,
+          "correction_exit_count": 0,
+          "cap_trim_count": 39,
+          "closing_gold_weight_pct": 29.666,
+          "gold_weight_exceed_15_days": 24,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S3_MA50_200",
+          "start_date": "2019-10-15",
+          "end_date": "2022-11-22",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 1.789,
+            "cagr_pct": 0.892,
+            "max_drawdown_pct": -2.912,
+            "volatility_pct": 2.142,
+            "sharpe_rf0": 0.425,
+            "longest_underwater_trading_days": 303
+          },
+          "holdout": {
+            "total_return_pct": 0.708,
+            "cagr_pct": 0.708,
+            "max_drawdown_pct": -1.648,
+            "volatility_pct": 1.525,
+            "sharpe_rf0": 0.47,
+            "longest_underwater_trading_days": 172
+          },
+          "full": {
+            "total_return_pct": 2.509,
+            "cagr_pct": 0.831,
+            "max_drawdown_pct": -2.912,
+            "volatility_pct": 1.957,
+            "sharpe_rf0": 0.432,
+            "longest_underwater_trading_days": 555
+          },
+          "sleeve_pnl_initial100": 0.8135,
+          "trades": 59,
+          "buy_count": 8,
+          "sell_count": 51,
+          "correction_exit_count": 0,
+          "cap_trim_count": 44,
+          "closing_gold_weight_pct": 29.928,
+          "gold_weight_exceed_15_days": 33,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S1_TSMOM252_ATR",
+          "start_date": "2019-10-15",
+          "end_date": "2022-11-22",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 0.96,
+            "cagr_pct": 0.48,
+            "max_drawdown_pct": -3.255,
+            "volatility_pct": 2.109,
+            "sharpe_rf0": 0.237,
+            "longest_underwater_trading_days": 303
+          },
+          "holdout": {
+            "total_return_pct": 0.923,
+            "cagr_pct": 0.923,
+            "max_drawdown_pct": -1.579,
+            "volatility_pct": 1.594,
+            "sharpe_rf0": 0.585,
+            "longest_underwater_trading_days": 172
+          },
+          "full": {
+            "total_return_pct": 1.892,
+            "cagr_pct": 0.628,
+            "max_drawdown_pct": -3.255,
+            "volatility_pct": 1.951,
+            "sharpe_rf0": 0.33,
+            "longest_underwater_trading_days": 555
+          },
+          "sleeve_pnl_initial100": 0.1965,
+          "trades": 156,
+          "buy_count": 28,
+          "sell_count": 128,
+          "correction_exit_count": 19,
+          "cap_trim_count": 101,
+          "closing_gold_weight_pct": 29.666,
+          "gold_weight_exceed_15_days": 78,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S2_DONCHIAN55_20_ATR",
+          "start_date": "2019-10-15",
+          "end_date": "2022-11-22",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 0.965,
+            "cagr_pct": 0.483,
+            "max_drawdown_pct": -2.745,
+            "volatility_pct": 1.889,
+            "sharpe_rf0": 0.264,
+            "longest_underwater_trading_days": 303
+          },
+          "holdout": {
+            "total_return_pct": 0.864,
+            "cagr_pct": 0.864,
+            "max_drawdown_pct": -1.491,
+            "volatility_pct": 1.479,
+            "sharpe_rf0": 0.589,
+            "longest_underwater_trading_days": 172
+          },
+          "full": {
+            "total_return_pct": 1.838,
+            "cagr_pct": 0.61,
+            "max_drawdown_pct": -2.745,
+            "volatility_pct": 1.762,
+            "sharpe_rf0": 0.354,
+            "longest_underwater_trading_days": 555
+          },
+          "sleeve_pnl_initial100": 0.1477,
+          "trades": 49,
+          "buy_count": 8,
+          "sell_count": 41,
+          "correction_exit_count": 7,
+          "cap_trim_count": 34,
+          "closing_gold_weight_pct": 29.666,
+          "gold_weight_exceed_15_days": 23,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S3_MA50_200_ATR",
+          "start_date": "2019-10-15",
+          "end_date": "2022-11-22",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 1.13,
+            "cagr_pct": 0.565,
+            "max_drawdown_pct": -2.961,
+            "volatility_pct": 2.038,
+            "sharpe_rf0": 0.286,
+            "longest_underwater_trading_days": 303
+          },
+          "holdout": {
+            "total_return_pct": 0.819,
+            "cagr_pct": 0.819,
+            "max_drawdown_pct": -1.547,
+            "volatility_pct": 1.5,
+            "sharpe_rf0": 0.552,
+            "longest_underwater_trading_days": 172
+          },
+          "full": {
+            "total_return_pct": 1.959,
+            "cagr_pct": 0.65,
+            "max_drawdown_pct": -2.961,
+            "volatility_pct": 1.875,
+            "sharpe_rf0": 0.355,
+            "longest_underwater_trading_days": 555
+          },
+          "sleeve_pnl_initial100": 0.2633,
+          "trades": 103,
+          "buy_count": 19,
+          "sell_count": 84,
+          "correction_exit_count": 15,
+          "cap_trim_count": 66,
+          "closing_gold_weight_pct": 29.928,
+          "gold_weight_exceed_15_days": 50,
+          "core_alone_exceed_15_days": 0
+        }
+      ]
+    },
+    {
+      "window_id": 7,
+      "start": "2020-10-28",
+      "end": "2023-12-05",
+      "results": [
+        {
+          "policy": "B0_lump",
+          "start_date": "2020-10-28",
+          "end_date": "2023-12-05",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": -0.154,
+            "cagr_pct": -0.077,
+            "max_drawdown_pct": -1.94,
+            "volatility_pct": 1.752,
+            "sharpe_rf0": -0.035,
+            "longest_underwater_trading_days": 322
+          },
+          "holdout": {
+            "total_return_pct": 2.319,
+            "cagr_pct": 2.319,
+            "max_drawdown_pct": -0.797,
+            "volatility_pct": 1.448,
+            "sharpe_rf0": 1.591,
+            "longest_underwater_trading_days": 49
+          },
+          "full": {
+            "total_return_pct": 2.162,
+            "cagr_pct": 0.716,
+            "max_drawdown_pct": -1.94,
+            "volatility_pct": 1.657,
+            "sharpe_rf0": 0.439,
+            "longest_underwater_trading_days": 322
+          },
+          "sleeve_pnl_initial100": 0.6332,
+          "trades": 35,
+          "buy_count": 1,
+          "sell_count": 34,
+          "correction_exit_count": 0,
+          "cap_trim_count": 34,
+          "closing_gold_weight_pct": 25.303,
+          "gold_weight_exceed_15_days": 23,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "B1_DCA",
+          "start_date": "2020-10-28",
+          "end_date": "2023-12-05",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 0.172,
+            "cagr_pct": 0.086,
+            "max_drawdown_pct": -1.712,
+            "volatility_pct": 1.694,
+            "sharpe_rf0": 0.059,
+            "longest_underwater_trading_days": 321
+          },
+          "holdout": {
+            "total_return_pct": 2.319,
+            "cagr_pct": 2.319,
+            "max_drawdown_pct": -0.797,
+            "volatility_pct": 1.448,
+            "sharpe_rf0": 1.591,
+            "longest_underwater_trading_days": 49
+          },
+          "full": {
+            "total_return_pct": 2.495,
+            "cagr_pct": 0.826,
+            "max_drawdown_pct": -1.712,
+            "volatility_pct": 1.616,
+            "sharpe_rf0": 0.517,
+            "longest_underwater_trading_days": 321
+          },
+          "sleeve_pnl_initial100": 0.9702,
+          "trades": 39,
+          "buy_count": 6,
+          "sell_count": 33,
+          "correction_exit_count": 0,
+          "cap_trim_count": 33,
+          "closing_gold_weight_pct": 25.303,
+          "gold_weight_exceed_15_days": 23,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "B2_cash",
+          "start_date": "2020-10-28",
+          "end_date": "2023-12-05",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": -0.106,
+            "cagr_pct": -0.053,
+            "max_drawdown_pct": -1.304,
+            "volatility_pct": 1.176,
+            "sharpe_rf0": -0.039,
+            "longest_underwater_trading_days": 322
+          },
+          "holdout": {
+            "total_return_pct": 1.631,
+            "cagr_pct": 1.631,
+            "max_drawdown_pct": -0.609,
+            "volatility_pct": 1.049,
+            "sharpe_rf0": 1.548,
+            "longest_underwater_trading_days": 49
+          },
+          "full": {
+            "total_return_pct": 1.524,
+            "cagr_pct": 0.506,
+            "max_drawdown_pct": -1.304,
+            "volatility_pct": 1.135,
+            "sharpe_rf0": 0.45,
+            "longest_underwater_trading_days": 322
+          },
+          "sleeve_pnl_initial100": 0.0,
+          "trades": 0,
+          "buy_count": 0,
+          "sell_count": 0,
+          "correction_exit_count": 0,
+          "cap_trim_count": 0,
+          "closing_gold_weight_pct": 19.444,
+          "gold_weight_exceed_15_days": 0,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S1_TSMOM252",
+          "start_date": "2020-10-28",
+          "end_date": "2023-12-05",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": -0.52,
+            "cagr_pct": -0.261,
+            "max_drawdown_pct": -1.938,
+            "volatility_pct": 1.576,
+            "sharpe_rf0": -0.158,
+            "longest_underwater_trading_days": 496
+          },
+          "holdout": {
+            "total_return_pct": 2.316,
+            "cagr_pct": 2.316,
+            "max_drawdown_pct": -0.797,
+            "volatility_pct": 1.447,
+            "sharpe_rf0": 1.59,
+            "longest_underwater_trading_days": 49
+          },
+          "full": {
+            "total_return_pct": 1.783,
+            "cagr_pct": 0.592,
+            "max_drawdown_pct": -1.938,
+            "volatility_pct": 1.535,
+            "sharpe_rf0": 0.392,
+            "longest_underwater_trading_days": 541
+          },
+          "sleeve_pnl_initial100": 0.2546,
+          "trades": 52,
+          "buy_count": 11,
+          "sell_count": 41,
+          "correction_exit_count": 0,
+          "cap_trim_count": 31,
+          "closing_gold_weight_pct": 25.303,
+          "gold_weight_exceed_15_days": 22,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S2_DONCHIAN55_20",
+          "start_date": "2020-10-28",
+          "end_date": "2023-12-05",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": -0.313,
+            "cagr_pct": -0.157,
+            "max_drawdown_pct": -1.603,
+            "volatility_pct": 1.379,
+            "sharpe_rf0": -0.107,
+            "longest_underwater_trading_days": 323
+          },
+          "holdout": {
+            "total_return_pct": 2.17,
+            "cagr_pct": 2.17,
+            "max_drawdown_pct": -0.76,
+            "volatility_pct": 1.398,
+            "sharpe_rf0": 1.543,
+            "longest_underwater_trading_days": 49
+          },
+          "full": {
+            "total_return_pct": 1.85,
+            "cagr_pct": 0.614,
+            "max_drawdown_pct": -1.603,
+            "volatility_pct": 1.386,
+            "sharpe_rf0": 0.448,
+            "longest_underwater_trading_days": 323
+          },
+          "sleeve_pnl_initial100": 0.3264,
+          "trades": 41,
+          "buy_count": 5,
+          "sell_count": 36,
+          "correction_exit_count": 0,
+          "cap_trim_count": 32,
+          "closing_gold_weight_pct": 25.711,
+          "gold_weight_exceed_15_days": 26,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S3_MA50_200",
+          "start_date": "2020-10-28",
+          "end_date": "2023-12-05",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": -0.464,
+            "cagr_pct": -0.233,
+            "max_drawdown_pct": -1.619,
+            "volatility_pct": 1.369,
+            "sharpe_rf0": -0.164,
+            "longest_underwater_trading_days": 323
+          },
+          "holdout": {
+            "total_return_pct": 2.317,
+            "cagr_pct": 2.317,
+            "max_drawdown_pct": -0.797,
+            "volatility_pct": 1.447,
+            "sharpe_rf0": 1.591,
+            "longest_underwater_trading_days": 49
+          },
+          "full": {
+            "total_return_pct": 1.842,
+            "cagr_pct": 0.611,
+            "max_drawdown_pct": -1.619,
+            "volatility_pct": 1.396,
+            "sharpe_rf0": 0.443,
+            "longest_underwater_trading_days": 323
+          },
+          "sleeve_pnl_initial100": 0.3137,
+          "trades": 44,
+          "buy_count": 6,
+          "sell_count": 38,
+          "correction_exit_count": 0,
+          "cap_trim_count": 33,
+          "closing_gold_weight_pct": 25.303,
+          "gold_weight_exceed_15_days": 23,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S1_TSMOM252_ATR",
+          "start_date": "2020-10-28",
+          "end_date": "2023-12-05",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": -0.406,
+            "cagr_pct": -0.204,
+            "max_drawdown_pct": -1.93,
+            "volatility_pct": 1.507,
+            "sharpe_rf0": -0.128,
+            "longest_underwater_trading_days": 496
+          },
+          "holdout": {
+            "total_return_pct": 2.157,
+            "cagr_pct": 2.157,
+            "max_drawdown_pct": -0.712,
+            "volatility_pct": 1.405,
+            "sharpe_rf0": 1.526,
+            "longest_underwater_trading_days": 46
+          },
+          "full": {
+            "total_return_pct": 1.742,
+            "cagr_pct": 0.578,
+            "max_drawdown_pct": -1.93,
+            "volatility_pct": 1.475,
+            "sharpe_rf0": 0.398,
+            "longest_underwater_trading_days": 537
+          },
+          "sleeve_pnl_initial100": 0.2131,
+          "trades": 106,
+          "buy_count": 27,
+          "sell_count": 79,
+          "correction_exit_count": 18,
+          "cap_trim_count": 53,
+          "closing_gold_weight_pct": 25.303,
+          "gold_weight_exceed_15_days": 41,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S2_DONCHIAN55_20_ATR",
+          "start_date": "2020-10-28",
+          "end_date": "2023-12-05",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": -0.06,
+            "cagr_pct": -0.03,
+            "max_drawdown_pct": -1.381,
+            "volatility_pct": 1.307,
+            "sharpe_rf0": -0.017,
+            "longest_underwater_trading_days": 322
+          },
+          "holdout": {
+            "total_return_pct": 1.631,
+            "cagr_pct": 1.631,
+            "max_drawdown_pct": -0.712,
+            "volatility_pct": 1.264,
+            "sharpe_rf0": 1.286,
+            "longest_underwater_trading_days": 50
+          },
+          "full": {
+            "total_return_pct": 1.569,
+            "cagr_pct": 0.521,
+            "max_drawdown_pct": -1.381,
+            "volatility_pct": 1.293,
+            "sharpe_rf0": 0.408,
+            "longest_underwater_trading_days": 322
+          },
+          "sleeve_pnl_initial100": 0.0458,
+          "trades": 44,
+          "buy_count": 10,
+          "sell_count": 34,
+          "correction_exit_count": 9,
+          "cap_trim_count": 25,
+          "closing_gold_weight_pct": 25.711,
+          "gold_weight_exceed_15_days": 21,
+          "core_alone_exceed_15_days": 0
+        },
+        {
+          "policy": "S3_MA50_200_ATR",
+          "start_date": "2020-10-28",
+          "end_date": "2023-12-05",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": -0.281,
+            "cagr_pct": -0.141,
+            "max_drawdown_pct": -1.543,
+            "volatility_pct": 1.34,
+            "sharpe_rf0": -0.098,
+            "longest_underwater_trading_days": 322
+          },
+          "holdout": {
+            "total_return_pct": 2.159,
+            "cagr_pct": 2.159,
+            "max_drawdown_pct": -0.711,
+            "volatility_pct": 1.405,
+            "sharpe_rf0": 1.527,
+            "longest_underwater_trading_days": 46
+          },
+          "full": {
+            "total_return_pct": 1.872,
+            "cagr_pct": 0.621,
+            "max_drawdown_pct": -1.543,
+            "volatility_pct": 1.363,
+            "sharpe_rf0": 0.461,
+            "longest_underwater_trading_days": 322
+          },
+          "sleeve_pnl_initial100": 0.3436,
+          "trades": 91,
+          "buy_count": 18,
+          "sell_count": 73,
+          "correction_exit_count": 14,
+          "cap_trim_count": 56,
+          "closing_gold_weight_pct": 25.303,
+          "gold_weight_exceed_15_days": 43,
+          "core_alone_exceed_15_days": 0
+        }
+      ]
+    },
+    {
+      "window_id": 8,
+      "start": "2021-11-10",
+      "end": "2024-12-19",
+      "results": [
+        {
+          "policy": "B0_lump",
+          "start_date": "2021-11-10",
+          "end_date": "2024-12-19",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 3.401,
+            "cagr_pct": 1.69,
+            "max_drawdown_pct": -1.712,
+            "volatility_pct": 1.593,
+            "sharpe_rf0": 1.06,
+            "longest_underwater_trading_days": 210
+          },
+          "holdout": {
+            "total_return_pct": 3.845,
+            "cagr_pct": 3.845,
+            "max_drawdown_pct": -1.158,
+            "volatility_pct": 2.013,
+            "sharpe_rf0": 1.885,
+            "longest_underwater_trading_days": 41
+          },
+          "full": {
+            "total_return_pct": 7.377,
+            "cagr_pct": 2.404,
+            "max_drawdown_pct": -1.712,
+            "volatility_pct": 1.744,
+            "sharpe_rf0": 1.371,
+            "longest_underwater_trading_days": 210
+          },
+          "sleeve_pnl_initial100": 1.3373,
+          "trades": 76,
+          "buy_count": 1,
+          "sell_count": 75,
+          "correction_exit_count": 0,
+          "cap_trim_count": 75,
+          "closing_gold_weight_pct": 19.886,
+          "gold_weight_exceed_15_days": 74,
+          "core_alone_exceed_15_days": 25
+        },
+        {
+          "policy": "B1_DCA",
+          "start_date": "2021-11-10",
+          "end_date": "2024-12-19",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 3.347,
+            "cagr_pct": 1.663,
+            "max_drawdown_pct": -1.695,
+            "volatility_pct": 1.55,
+            "sharpe_rf0": 1.072,
+            "longest_underwater_trading_days": 209
+          },
+          "holdout": {
+            "total_return_pct": 3.845,
+            "cagr_pct": 3.845,
+            "max_drawdown_pct": -1.158,
+            "volatility_pct": 2.013,
+            "sharpe_rf0": 1.884,
+            "longest_underwater_trading_days": 41
+          },
+          "full": {
+            "total_return_pct": 7.321,
+            "cagr_pct": 2.386,
+            "max_drawdown_pct": -1.695,
+            "volatility_pct": 1.718,
+            "sharpe_rf0": 1.381,
+            "longest_underwater_trading_days": 209
+          },
+          "sleeve_pnl_initial100": 1.293,
+          "trades": 76,
+          "buy_count": 5,
+          "sell_count": 71,
+          "correction_exit_count": 0,
+          "cap_trim_count": 71,
+          "closing_gold_weight_pct": 19.894,
+          "gold_weight_exceed_15_days": 75,
+          "core_alone_exceed_15_days": 25
+        },
+        {
+          "policy": "B2_cash",
+          "start_date": "2021-11-10",
+          "end_date": "2024-12-19",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 2.477,
+            "cagr_pct": 1.233,
+            "max_drawdown_pct": -1.243,
+            "volatility_pct": 1.175,
+            "sharpe_rf0": 1.049,
+            "longest_underwater_trading_days": 210
+          },
+          "holdout": {
+            "total_return_pct": 3.463,
+            "cagr_pct": 3.463,
+            "max_drawdown_pct": -1.172,
+            "volatility_pct": 1.921,
+            "sharpe_rf0": 1.782,
+            "longest_underwater_trading_days": 41
+          },
+          "full": {
+            "total_return_pct": 6.025,
+            "cagr_pct": 1.972,
+            "max_drawdown_pct": -1.243,
+            "volatility_pct": 1.467,
+            "sharpe_rf0": 1.339,
+            "longest_underwater_trading_days": 210
+          },
+          "sleeve_pnl_initial100": 0.0,
+          "trades": 0,
+          "buy_count": 0,
+          "sell_count": 0,
+          "correction_exit_count": 0,
+          "cap_trim_count": 0,
+          "closing_gold_weight_pct": 20.137,
+          "gold_weight_exceed_15_days": 42,
+          "core_alone_exceed_15_days": 39
+        },
+        {
+          "policy": "S1_TSMOM252",
+          "start_date": "2021-11-10",
+          "end_date": "2024-12-19",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 3.14,
+            "cagr_pct": 1.561,
+            "max_drawdown_pct": -1.722,
+            "volatility_pct": 1.533,
+            "sharpe_rf0": 1.018,
+            "longest_underwater_trading_days": 213
+          },
+          "holdout": {
+            "total_return_pct": 3.848,
+            "cagr_pct": 3.848,
+            "max_drawdown_pct": -1.16,
+            "volatility_pct": 2.014,
+            "sharpe_rf0": 1.885,
+            "longest_underwater_trading_days": 41
+          },
+          "full": {
+            "total_return_pct": 7.109,
+            "cagr_pct": 2.319,
+            "max_drawdown_pct": -1.722,
+            "volatility_pct": 1.709,
+            "sharpe_rf0": 1.35,
+            "longest_underwater_trading_days": 213
+          },
+          "sleeve_pnl_initial100": 1.0834,
+          "trades": 103,
+          "buy_count": 9,
+          "sell_count": 94,
+          "correction_exit_count": 0,
+          "cap_trim_count": 91,
+          "closing_gold_weight_pct": 20.066,
+          "gold_weight_exceed_15_days": 90,
+          "core_alone_exceed_15_days": 29
+        },
+        {
+          "policy": "S2_DONCHIAN55_20",
+          "start_date": "2021-11-10",
+          "end_date": "2024-12-19",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 2.988,
+            "cagr_pct": 1.486,
+            "max_drawdown_pct": -1.437,
+            "volatility_pct": 1.462,
+            "sharpe_rf0": 1.016,
+            "longest_underwater_trading_days": 213
+          },
+          "holdout": {
+            "total_return_pct": 3.69,
+            "cagr_pct": 3.69,
+            "max_drawdown_pct": -1.164,
+            "volatility_pct": 1.986,
+            "sharpe_rf0": 1.834,
+            "longest_underwater_trading_days": 41
+          },
+          "full": {
+            "total_return_pct": 6.788,
+            "cagr_pct": 2.216,
+            "max_drawdown_pct": -1.437,
+            "volatility_pct": 1.656,
+            "sharpe_rf0": 1.332,
+            "longest_underwater_trading_days": 213
+          },
+          "sleeve_pnl_initial100": 0.7628,
+          "trades": 94,
+          "buy_count": 6,
+          "sell_count": 88,
+          "correction_exit_count": 0,
+          "cap_trim_count": 83,
+          "closing_gold_weight_pct": 19.993,
+          "gold_weight_exceed_15_days": 93,
+          "core_alone_exceed_15_days": 31
+        },
+        {
+          "policy": "S3_MA50_200",
+          "start_date": "2021-11-10",
+          "end_date": "2024-12-19",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 2.979,
+            "cagr_pct": 1.481,
+            "max_drawdown_pct": -1.633,
+            "volatility_pct": 1.47,
+            "sharpe_rf0": 1.008,
+            "longest_underwater_trading_days": 217
+          },
+          "holdout": {
+            "total_return_pct": 3.847,
+            "cagr_pct": 3.847,
+            "max_drawdown_pct": -1.162,
+            "volatility_pct": 2.015,
+            "sharpe_rf0": 1.884,
+            "longest_underwater_trading_days": 41
+          },
+          "full": {
+            "total_return_pct": 6.94,
+            "cagr_pct": 2.265,
+            "max_drawdown_pct": -1.633,
+            "volatility_pct": 1.672,
+            "sharpe_rf0": 1.348,
+            "longest_underwater_trading_days": 217
+          },
+          "sleeve_pnl_initial100": 0.9145,
+          "trades": 98,
+          "buy_count": 9,
+          "sell_count": 89,
+          "correction_exit_count": 0,
+          "cap_trim_count": 86,
+          "closing_gold_weight_pct": 20.066,
+          "gold_weight_exceed_15_days": 87,
+          "core_alone_exceed_15_days": 29
+        },
+        {
+          "policy": "S1_TSMOM252_ATR",
+          "start_date": "2021-11-10",
+          "end_date": "2024-12-19",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 3.114,
+            "cagr_pct": 1.548,
+            "max_drawdown_pct": -1.54,
+            "volatility_pct": 1.491,
+            "sharpe_rf0": 1.038,
+            "longest_underwater_trading_days": 213
+          },
+          "holdout": {
+            "total_return_pct": 3.704,
+            "cagr_pct": 3.704,
+            "max_drawdown_pct": -1.162,
+            "volatility_pct": 2.005,
+            "sharpe_rf0": 1.824,
+            "longest_underwater_trading_days": 41
+          },
+          "full": {
+            "total_return_pct": 6.933,
+            "cagr_pct": 2.263,
+            "max_drawdown_pct": -1.54,
+            "volatility_pct": 1.68,
+            "sharpe_rf0": 1.34,
+            "longest_underwater_trading_days": 213
+          },
+          "sleeve_pnl_initial100": 0.9075,
+          "trades": 198,
+          "buy_count": 29,
+          "sell_count": 169,
+          "correction_exit_count": 22,
+          "cap_trim_count": 145,
+          "closing_gold_weight_pct": 20.066,
+          "gold_weight_exceed_15_days": 144,
+          "core_alone_exceed_15_days": 29
+        },
+        {
+          "policy": "S2_DONCHIAN55_20_ATR",
+          "start_date": "2021-11-10",
+          "end_date": "2024-12-19",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 2.596,
+            "cagr_pct": 1.292,
+            "max_drawdown_pct": -1.431,
+            "volatility_pct": 1.36,
+            "sharpe_rf0": 0.951,
+            "longest_underwater_trading_days": 217
+          },
+          "holdout": {
+            "total_return_pct": 3.605,
+            "cagr_pct": 3.605,
+            "max_drawdown_pct": -1.169,
+            "volatility_pct": 1.964,
+            "sharpe_rf0": 1.813,
+            "longest_underwater_trading_days": 41
+          },
+          "full": {
+            "total_return_pct": 6.295,
+            "cagr_pct": 2.058,
+            "max_drawdown_pct": -1.431,
+            "volatility_pct": 1.588,
+            "sharpe_rf0": 1.291,
+            "longest_underwater_trading_days": 217
+          },
+          "sleeve_pnl_initial100": 0.2692,
+          "trades": 82,
+          "buy_count": 12,
+          "sell_count": 70,
+          "correction_exit_count": 11,
+          "cap_trim_count": 59,
+          "closing_gold_weight_pct": 20.086,
+          "gold_weight_exceed_15_days": 82,
+          "core_alone_exceed_15_days": 36
+        },
+        {
+          "policy": "S3_MA50_200_ATR",
+          "start_date": "2021-11-10",
+          "end_date": "2024-12-19",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 2.985,
+            "cagr_pct": 1.485,
+            "max_drawdown_pct": -1.502,
+            "volatility_pct": 1.433,
+            "sharpe_rf0": 1.036,
+            "longest_underwater_trading_days": 213
+          },
+          "holdout": {
+            "total_return_pct": 3.702,
+            "cagr_pct": 3.702,
+            "max_drawdown_pct": -1.167,
+            "volatility_pct": 2.007,
+            "sharpe_rf0": 1.822,
+            "longest_underwater_trading_days": 41
+          },
+          "full": {
+            "total_return_pct": 6.798,
+            "cagr_pct": 2.219,
+            "max_drawdown_pct": -1.502,
+            "volatility_pct": 1.647,
+            "sharpe_rf0": 1.341,
+            "longest_underwater_trading_days": 213
+          },
+          "sleeve_pnl_initial100": 0.7721,
+          "trades": 190,
+          "buy_count": 28,
+          "sell_count": 162,
+          "correction_exit_count": 21,
+          "cap_trim_count": 139,
+          "closing_gold_weight_pct": 20.066,
+          "gold_weight_exceed_15_days": 140,
+          "core_alone_exceed_15_days": 31
+        }
+      ]
+    },
+    {
+      "window_id": 9,
+      "start": "2022-11-23",
+      "end": "2026-01-05",
+      "results": [
+        {
+          "policy": "B0_lump",
+          "start_date": "2022-11-23",
+          "end_date": "2026-01-05",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 6.272,
+            "cagr_pct": 3.095,
+            "max_drawdown_pct": -1.124,
+            "volatility_pct": 1.748,
+            "sharpe_rf0": 1.753,
+            "longest_underwater_trading_days": 49
+          },
+          "holdout": {
+            "total_return_pct": 8.664,
+            "cagr_pct": 8.664,
+            "max_drawdown_pct": -2.134,
+            "volatility_pct": 3.455,
+            "sharpe_rf0": 2.422,
+            "longest_underwater_trading_days": 100
+          },
+          "full": {
+            "total_return_pct": 15.479,
+            "cagr_pct": 4.921,
+            "max_drawdown_pct": -2.134,
+            "volatility_pct": 2.456,
+            "sharpe_rf0": 1.968,
+            "longest_underwater_trading_days": 100
+          },
+          "sleeve_pnl_initial100": 1.3348,
+          "trades": 84,
+          "buy_count": 1,
+          "sell_count": 83,
+          "correction_exit_count": 0,
+          "cap_trim_count": 83,
+          "closing_gold_weight_pct": 17.285,
+          "gold_weight_exceed_15_days": 280,
+          "core_alone_exceed_15_days": 226
+        },
+        {
+          "policy": "B1_DCA",
+          "start_date": "2022-11-23",
+          "end_date": "2026-01-05",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 6.101,
+            "cagr_pct": 3.012,
+            "max_drawdown_pct": -1.124,
+            "volatility_pct": 1.722,
+            "sharpe_rf0": 1.732,
+            "longest_underwater_trading_days": 49
+          },
+          "holdout": {
+            "total_return_pct": 8.676,
+            "cagr_pct": 8.676,
+            "max_drawdown_pct": -2.137,
+            "volatility_pct": 3.461,
+            "sharpe_rf0": 2.422,
+            "longest_underwater_trading_days": 100
+          },
+          "full": {
+            "total_return_pct": 15.306,
+            "cagr_pct": 4.868,
+            "max_drawdown_pct": -2.137,
+            "volatility_pct": 2.447,
+            "sharpe_rf0": 1.955,
+            "longest_underwater_trading_days": 100
+          },
+          "sleeve_pnl_initial100": 1.1639,
+          "trades": 70,
+          "buy_count": 6,
+          "sell_count": 64,
+          "correction_exit_count": 0,
+          "cap_trim_count": 64,
+          "closing_gold_weight_pct": 17.311,
+          "gold_weight_exceed_15_days": 270,
+          "core_alone_exceed_15_days": 226
+        },
+        {
+          "policy": "B2_cash",
+          "start_date": "2022-11-23",
+          "end_date": "2026-01-05",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 4.965,
+            "cagr_pct": 2.457,
+            "max_drawdown_pct": -1.107,
+            "volatility_pct": 1.485,
+            "sharpe_rf0": 1.642,
+            "longest_underwater_trading_days": 49
+          },
+          "holdout": {
+            "total_return_pct": 8.743,
+            "cagr_pct": 8.743,
+            "max_drawdown_pct": -2.159,
+            "volatility_pct": 3.495,
+            "sharpe_rf0": 2.416,
+            "longest_underwater_trading_days": 100
+          },
+          "full": {
+            "total_return_pct": 14.142,
+            "cagr_pct": 4.514,
+            "max_drawdown_pct": -2.159,
+            "volatility_pct": 2.359,
+            "sharpe_rf0": 1.883,
+            "longest_underwater_trading_days": 100
+          },
+          "sleeve_pnl_initial100": 0.0,
+          "trades": 0,
+          "buy_count": 0,
+          "sell_count": 0,
+          "correction_exit_count": 0,
+          "cap_trim_count": 0,
+          "closing_gold_weight_pct": 17.488,
+          "gold_weight_exceed_15_days": 226,
+          "core_alone_exceed_15_days": 226
+        },
+        {
+          "policy": "S1_TSMOM252",
+          "start_date": "2022-11-23",
+          "end_date": "2026-01-05",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 6.272,
+            "cagr_pct": 3.095,
+            "max_drawdown_pct": -1.124,
+            "volatility_pct": 1.748,
+            "sharpe_rf0": 1.753,
+            "longest_underwater_trading_days": 49
+          },
+          "holdout": {
+            "total_return_pct": 8.664,
+            "cagr_pct": 8.664,
+            "max_drawdown_pct": -2.134,
+            "volatility_pct": 3.455,
+            "sharpe_rf0": 2.422,
+            "longest_underwater_trading_days": 100
+          },
+          "full": {
+            "total_return_pct": 15.479,
+            "cagr_pct": 4.921,
+            "max_drawdown_pct": -2.134,
+            "volatility_pct": 2.456,
+            "sharpe_rf0": 1.968,
+            "longest_underwater_trading_days": 100
+          },
+          "sleeve_pnl_initial100": 1.3348,
+          "trades": 84,
+          "buy_count": 1,
+          "sell_count": 83,
+          "correction_exit_count": 0,
+          "cap_trim_count": 83,
+          "closing_gold_weight_pct": 17.285,
+          "gold_weight_exceed_15_days": 280,
+          "core_alone_exceed_15_days": 226
+        },
+        {
+          "policy": "S2_DONCHIAN55_20",
+          "start_date": "2022-11-23",
+          "end_date": "2026-01-05",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 5.743,
+            "cagr_pct": 2.837,
+            "max_drawdown_pct": -1.122,
+            "volatility_pct": 1.679,
+            "sharpe_rf0": 1.675,
+            "longest_underwater_trading_days": 82
+          },
+          "holdout": {
+            "total_return_pct": 8.684,
+            "cagr_pct": 8.684,
+            "max_drawdown_pct": -2.144,
+            "volatility_pct": 3.471,
+            "sharpe_rf0": 2.417,
+            "longest_underwater_trading_days": 100
+          },
+          "full": {
+            "total_return_pct": 14.926,
+            "cagr_pct": 4.753,
+            "max_drawdown_pct": -2.144,
+            "volatility_pct": 2.432,
+            "sharpe_rf0": 1.922,
+            "longest_underwater_trading_days": 100
+          },
+          "sleeve_pnl_initial100": 0.7839,
+          "trades": 82,
+          "buy_count": 5,
+          "sell_count": 77,
+          "correction_exit_count": 0,
+          "cap_trim_count": 73,
+          "closing_gold_weight_pct": 17.368,
+          "gold_weight_exceed_15_days": 284,
+          "core_alone_exceed_15_days": 226
+        },
+        {
+          "policy": "S3_MA50_200",
+          "start_date": "2022-11-23",
+          "end_date": "2026-01-05",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 6.272,
+            "cagr_pct": 3.095,
+            "max_drawdown_pct": -1.124,
+            "volatility_pct": 1.748,
+            "sharpe_rf0": 1.753,
+            "longest_underwater_trading_days": 49
+          },
+          "holdout": {
+            "total_return_pct": 8.664,
+            "cagr_pct": 8.664,
+            "max_drawdown_pct": -2.134,
+            "volatility_pct": 3.455,
+            "sharpe_rf0": 2.422,
+            "longest_underwater_trading_days": 100
+          },
+          "full": {
+            "total_return_pct": 15.479,
+            "cagr_pct": 4.921,
+            "max_drawdown_pct": -2.134,
+            "volatility_pct": 2.456,
+            "sharpe_rf0": 1.968,
+            "longest_underwater_trading_days": 100
+          },
+          "sleeve_pnl_initial100": 1.3348,
+          "trades": 84,
+          "buy_count": 1,
+          "sell_count": 83,
+          "correction_exit_count": 0,
+          "cap_trim_count": 83,
+          "closing_gold_weight_pct": 17.285,
+          "gold_weight_exceed_15_days": 280,
+          "core_alone_exceed_15_days": 226
+        },
+        {
+          "policy": "S1_TSMOM252_ATR",
+          "start_date": "2022-11-23",
+          "end_date": "2026-01-05",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 5.92,
+            "cagr_pct": 2.923,
+            "max_drawdown_pct": -1.114,
+            "volatility_pct": 1.721,
+            "sharpe_rf0": 1.683,
+            "longest_underwater_trading_days": 46
+          },
+          "holdout": {
+            "total_return_pct": 8.692,
+            "cagr_pct": 8.692,
+            "max_drawdown_pct": -2.141,
+            "volatility_pct": 3.466,
+            "sharpe_rf0": 2.422,
+            "longest_underwater_trading_days": 100
+          },
+          "full": {
+            "total_return_pct": 15.126,
+            "cagr_pct": 4.814,
+            "max_drawdown_pct": -2.141,
+            "volatility_pct": 2.449,
+            "sharpe_rf0": 1.932,
+            "longest_underwater_trading_days": 100
+          },
+          "sleeve_pnl_initial100": 0.9813,
+          "trades": 181,
+          "buy_count": 19,
+          "sell_count": 162,
+          "correction_exit_count": 18,
+          "cap_trim_count": 144,
+          "closing_gold_weight_pct": 17.339,
+          "gold_weight_exceed_15_days": 335,
+          "core_alone_exceed_15_days": 226
+        },
+        {
+          "policy": "S2_DONCHIAN55_20_ATR",
+          "start_date": "2022-11-23",
+          "end_date": "2026-01-05",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 5.228,
+            "cagr_pct": 2.586,
+            "max_drawdown_pct": -1.116,
+            "volatility_pct": 1.609,
+            "sharpe_rf0": 1.595,
+            "longest_underwater_trading_days": 82
+          },
+          "holdout": {
+            "total_return_pct": 8.725,
+            "cagr_pct": 8.725,
+            "max_drawdown_pct": -2.154,
+            "volatility_pct": 3.487,
+            "sharpe_rf0": 2.417,
+            "longest_underwater_trading_days": 100
+          },
+          "full": {
+            "total_return_pct": 14.408,
+            "cagr_pct": 4.595,
+            "max_drawdown_pct": -2.154,
+            "volatility_pct": 2.409,
+            "sharpe_rf0": 1.877,
+            "longest_underwater_trading_days": 100
+          },
+          "sleeve_pnl_initial100": 0.2666,
+          "trades": 74,
+          "buy_count": 10,
+          "sell_count": 64,
+          "correction_exit_count": 9,
+          "cap_trim_count": 55,
+          "closing_gold_weight_pct": 17.447,
+          "gold_weight_exceed_15_days": 270,
+          "core_alone_exceed_15_days": 226
+        },
+        {
+          "policy": "S3_MA50_200_ATR",
+          "start_date": "2022-11-23",
+          "end_date": "2026-01-05",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 5.92,
+            "cagr_pct": 2.923,
+            "max_drawdown_pct": -1.114,
+            "volatility_pct": 1.721,
+            "sharpe_rf0": 1.683,
+            "longest_underwater_trading_days": 46
+          },
+          "holdout": {
+            "total_return_pct": 8.692,
+            "cagr_pct": 8.692,
+            "max_drawdown_pct": -2.141,
+            "volatility_pct": 3.466,
+            "sharpe_rf0": 2.422,
+            "longest_underwater_trading_days": 100
+          },
+          "full": {
+            "total_return_pct": 15.126,
+            "cagr_pct": 4.814,
+            "max_drawdown_pct": -2.141,
+            "volatility_pct": 2.449,
+            "sharpe_rf0": 1.932,
+            "longest_underwater_trading_days": 100
+          },
+          "sleeve_pnl_initial100": 0.9813,
+          "trades": 181,
+          "buy_count": 19,
+          "sell_count": 162,
+          "correction_exit_count": 18,
+          "cap_trim_count": 144,
+          "closing_gold_weight_pct": 17.339,
+          "gold_weight_exceed_15_days": 335,
+          "core_alone_exceed_15_days": 226
+        }
+      ]
+    },
+    {
+      "window_id": 10,
+      "start": "2023-09-27",
+      "end": "2026-11-16",
+      "results": [
+        {
+          "policy": "B0_lump",
+          "start_date": "2023-09-27",
+          "end_date": "2026-11-16",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 10.8,
+            "cagr_pct": 5.273,
+            "max_drawdown_pct": -1.893,
+            "volatility_pct": 2.488,
+            "sharpe_rf0": 2.077,
+            "longest_underwater_trading_days": 100
+          },
+          "holdout": {
+            "total_return_pct": -1.864,
+            "cagr_pct": -1.864,
+            "max_drawdown_pct": -7.554,
+            "volatility_pct": 5.631,
+            "sharpe_rf0": -0.306,
+            "longest_underwater_trading_days": 190
+          },
+          "full": {
+            "total_return_pct": 8.735,
+            "cagr_pct": 2.835,
+            "max_drawdown_pct": -7.554,
+            "volatility_pct": 3.837,
+            "sharpe_rf0": 0.748,
+            "longest_underwater_trading_days": 190
+          },
+          "sleeve_pnl_initial100": 1.3427,
+          "trades": 59,
+          "buy_count": 1,
+          "sell_count": 58,
+          "correction_exit_count": 0,
+          "cap_trim_count": 58,
+          "closing_gold_weight_pct": 15.833,
+          "gold_weight_exceed_15_days": 408,
+          "core_alone_exceed_15_days": 367
+        },
+        {
+          "policy": "B1_DCA",
+          "start_date": "2023-09-27",
+          "end_date": "2026-11-16",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 10.642,
+            "cagr_pct": 5.197,
+            "max_drawdown_pct": -1.894,
+            "volatility_pct": 2.467,
+            "sharpe_rf0": 2.066,
+            "longest_underwater_trading_days": 100
+          },
+          "holdout": {
+            "total_return_pct": -1.866,
+            "cagr_pct": -1.866,
+            "max_drawdown_pct": -7.56,
+            "volatility_pct": 5.636,
+            "sharpe_rf0": -0.306,
+            "longest_underwater_trading_days": 190
+          },
+          "full": {
+            "total_return_pct": 8.577,
+            "cagr_pct": 2.785,
+            "max_drawdown_pct": -7.56,
+            "volatility_pct": 3.83,
+            "sharpe_rf0": 0.736,
+            "longest_underwater_trading_days": 190
+          },
+          "sleeve_pnl_initial100": 1.2434,
+          "trades": 54,
+          "buy_count": 5,
+          "sell_count": 49,
+          "correction_exit_count": 0,
+          "cap_trim_count": 49,
+          "closing_gold_weight_pct": 15.848,
+          "gold_weight_exceed_15_days": 404,
+          "core_alone_exceed_15_days": 371
+        },
+        {
+          "policy": "B2_cash",
+          "start_date": "2023-09-27",
+          "end_date": "2026-11-16",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 9.385,
+            "cagr_pct": 4.597,
+            "max_drawdown_pct": -1.915,
+            "volatility_pct": 2.31,
+            "sharpe_rf0": 1.958,
+            "longest_underwater_trading_days": 100
+          },
+          "holdout": {
+            "total_return_pct": -1.887,
+            "cagr_pct": -1.887,
+            "max_drawdown_pct": -7.641,
+            "volatility_pct": 5.698,
+            "sharpe_rf0": -0.306,
+            "longest_underwater_trading_days": 190
+          },
+          "full": {
+            "total_return_pct": 7.321,
+            "cagr_pct": 2.386,
+            "max_drawdown_pct": -7.641,
+            "volatility_pct": 3.794,
+            "sharpe_rf0": 0.641,
+            "longest_underwater_trading_days": 190
+          },
+          "sleeve_pnl_initial100": 0.0,
+          "trades": 0,
+          "buy_count": 0,
+          "sell_count": 0,
+          "correction_exit_count": 0,
+          "cap_trim_count": 0,
+          "closing_gold_weight_pct": 16.032,
+          "gold_weight_exceed_15_days": 384,
+          "core_alone_exceed_15_days": 384
+        },
+        {
+          "policy": "S1_TSMOM252",
+          "start_date": "2023-09-27",
+          "end_date": "2026-11-16",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 10.804,
+            "cagr_pct": 5.274,
+            "max_drawdown_pct": -1.892,
+            "volatility_pct": 2.489,
+            "sharpe_rf0": 2.078,
+            "longest_underwater_trading_days": 100
+          },
+          "holdout": {
+            "total_return_pct": -1.864,
+            "cagr_pct": -1.864,
+            "max_drawdown_pct": -7.553,
+            "volatility_pct": 5.631,
+            "sharpe_rf0": -0.306,
+            "longest_underwater_trading_days": 190
+          },
+          "full": {
+            "total_return_pct": 8.739,
+            "cagr_pct": 2.836,
+            "max_drawdown_pct": -7.553,
+            "volatility_pct": 3.837,
+            "sharpe_rf0": 0.748,
+            "longest_underwater_trading_days": 190
+          },
+          "sleeve_pnl_initial100": 1.3467,
+          "trades": 79,
+          "buy_count": 10,
+          "sell_count": 69,
+          "correction_exit_count": 0,
+          "cap_trim_count": 69,
+          "closing_gold_weight_pct": 15.833,
+          "gold_weight_exceed_15_days": 413,
+          "core_alone_exceed_15_days": 366
+        },
+        {
+          "policy": "S2_DONCHIAN55_20",
+          "start_date": "2023-09-27",
+          "end_date": "2026-11-16",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 10.088,
+            "cagr_pct": 4.933,
+            "max_drawdown_pct": -1.903,
+            "volatility_pct": 2.416,
+            "sharpe_rf0": 2.005,
+            "longest_underwater_trading_days": 100
+          },
+          "holdout": {
+            "total_return_pct": -1.875,
+            "cagr_pct": -1.875,
+            "max_drawdown_pct": -7.595,
+            "volatility_pct": 5.663,
+            "sharpe_rf0": -0.306,
+            "longest_underwater_trading_days": 190
+          },
+          "full": {
+            "total_return_pct": 8.024,
+            "cagr_pct": 2.61,
+            "max_drawdown_pct": -7.595,
+            "volatility_pct": 3.821,
+            "sharpe_rf0": 0.693,
+            "longest_underwater_trading_days": 190
+          },
+          "sleeve_pnl_initial100": 0.7026,
+          "trades": 63,
+          "buy_count": 5,
+          "sell_count": 58,
+          "correction_exit_count": 0,
+          "cap_trim_count": 55,
+          "closing_gold_weight_pct": 15.927,
+          "gold_weight_exceed_15_days": 420,
+          "core_alone_exceed_15_days": 379
+        },
+        {
+          "policy": "S3_MA50_200",
+          "start_date": "2023-09-27",
+          "end_date": "2026-11-16",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 10.804,
+            "cagr_pct": 5.274,
+            "max_drawdown_pct": -1.892,
+            "volatility_pct": 2.489,
+            "sharpe_rf0": 2.078,
+            "longest_underwater_trading_days": 100
+          },
+          "holdout": {
+            "total_return_pct": -1.864,
+            "cagr_pct": -1.864,
+            "max_drawdown_pct": -7.553,
+            "volatility_pct": 5.631,
+            "sharpe_rf0": -0.306,
+            "longest_underwater_trading_days": 190
+          },
+          "full": {
+            "total_return_pct": 8.739,
+            "cagr_pct": 2.836,
+            "max_drawdown_pct": -7.553,
+            "volatility_pct": 3.837,
+            "sharpe_rf0": 0.748,
+            "longest_underwater_trading_days": 190
+          },
+          "sleeve_pnl_initial100": 1.3467,
+          "trades": 79,
+          "buy_count": 10,
+          "sell_count": 69,
+          "correction_exit_count": 0,
+          "cap_trim_count": 69,
+          "closing_gold_weight_pct": 15.833,
+          "gold_weight_exceed_15_days": 413,
+          "core_alone_exceed_15_days": 366
+        },
+        {
+          "policy": "S1_TSMOM252_ATR",
+          "start_date": "2023-09-27",
+          "end_date": "2026-11-16",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 10.214,
+            "cagr_pct": 4.993,
+            "max_drawdown_pct": -1.902,
+            "volatility_pct": 2.469,
+            "sharpe_rf0": 1.986,
+            "longest_underwater_trading_days": 100
+          },
+          "holdout": {
+            "total_return_pct": -1.874,
+            "cagr_pct": -1.874,
+            "max_drawdown_pct": -7.591,
+            "volatility_pct": 5.66,
+            "sharpe_rf0": -0.306,
+            "longest_underwater_trading_days": 190
+          },
+          "full": {
+            "total_return_pct": 8.148,
+            "cagr_pct": 2.649,
+            "max_drawdown_pct": -7.591,
+            "volatility_pct": 3.842,
+            "sharpe_rf0": 0.7,
+            "longest_underwater_trading_days": 190
+          },
+          "sleeve_pnl_initial100": 0.7573,
+          "trades": 125,
+          "buy_count": 18,
+          "sell_count": 107,
+          "correction_exit_count": 15,
+          "cap_trim_count": 92,
+          "closing_gold_weight_pct": 15.919,
+          "gold_weight_exceed_15_days": 446,
+          "core_alone_exceed_15_days": 379
+        },
+        {
+          "policy": "S2_DONCHIAN55_20_ATR",
+          "start_date": "2023-09-27",
+          "end_date": "2026-11-16",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 9.827,
+            "cagr_pct": 4.808,
+            "max_drawdown_pct": -1.908,
+            "volatility_pct": 2.383,
+            "sharpe_rf0": 1.983,
+            "longest_underwater_trading_days": 108
+          },
+          "holdout": {
+            "total_return_pct": -1.879,
+            "cagr_pct": -1.879,
+            "max_drawdown_pct": -7.612,
+            "volatility_pct": 5.676,
+            "sharpe_rf0": -0.306,
+            "longest_underwater_trading_days": 190
+          },
+          "full": {
+            "total_return_pct": 7.763,
+            "cagr_pct": 2.527,
+            "max_drawdown_pct": -7.612,
+            "volatility_pct": 3.813,
+            "sharpe_rf0": 0.674,
+            "longest_underwater_trading_days": 190
+          },
+          "sleeve_pnl_initial100": 0.4417,
+          "trades": 55,
+          "buy_count": 6,
+          "sell_count": 49,
+          "correction_exit_count": 6,
+          "cap_trim_count": 43,
+          "closing_gold_weight_pct": 15.966,
+          "gold_weight_exceed_15_days": 415,
+          "core_alone_exceed_15_days": 382
+        },
+        {
+          "policy": "S3_MA50_200_ATR",
+          "start_date": "2023-09-27",
+          "end_date": "2026-11-16",
+          "cost_per_side_bps": 10.0,
+          "bars": 756,
+          "training": {
+            "total_return_pct": 10.214,
+            "cagr_pct": 4.993,
+            "max_drawdown_pct": -1.902,
+            "volatility_pct": 2.469,
+            "sharpe_rf0": 1.986,
+            "longest_underwater_trading_days": 100
+          },
+          "holdout": {
+            "total_return_pct": -1.874,
+            "cagr_pct": -1.874,
+            "max_drawdown_pct": -7.591,
+            "volatility_pct": 5.66,
+            "sharpe_rf0": -0.306,
+            "longest_underwater_trading_days": 190
+          },
+          "full": {
+            "total_return_pct": 8.148,
+            "cagr_pct": 2.649,
+            "max_drawdown_pct": -7.591,
+            "volatility_pct": 3.842,
+            "sharpe_rf0": 0.7,
+            "longest_underwater_trading_days": 190
+          },
+          "sleeve_pnl_initial100": 0.7573,
+          "trades": 125,
+          "buy_count": 18,
+          "sell_count": 107,
+          "correction_exit_count": 15,
+          "cap_trim_count": 92,
+          "closing_gold_weight_pct": 15.919,
+          "gold_weight_exceed_15_days": 446,
+          "core_alone_exceed_15_days": 379
+        }
+      ]
+    }
+  ],
+  "aggregate": [
     {
       "policy": "B0_lump",
-      "cost_per_side_bps": 10.0,
-      "bars": 2980,
-      "training": {
-        "total_return_pct": 25.1,
-        "cagr_pct": 2.091,
-        "max_drawdown_pct": -3.166,
-        "volatility_pct": 2.256,
-        "sharpe_rf0": 0.929,
-        "longest_underwater_trading_days": 708
-      },
-      "holdout": {
-        "total_return_pct": -2.879,
-        "cagr_pct": -2.879,
-        "max_drawdown_pct": -11.31,
-        "volatility_pct": 8.582,
-        "sharpe_rf0": -0.297,
-        "longest_underwater_trading_days": 190
-      },
-      "full": {
-        "total_return_pct": 21.498,
-        "cagr_pct": 1.661,
-        "max_drawdown_pct": -11.31,
-        "volatility_pct": 3.298,
-        "sharpe_rf0": 0.516,
-        "longest_underwater_trading_days": 708
-      },
-      "sleeve_pnl_initial100": 1.3552,
-      "trades": 56,
-      "buy_count": 1,
-      "sell_count": 55,
-      "correction_exit_count": 0,
-      "cap_trim_count": 55,
-      "closing_gold_weight_pct": 24.712,
-      "gold_weight_exceed_15_days": 934,
-      "core_alone_exceed_15_days": 894
+      "windows": 10,
+      "average_satellite_profit_points_of_initial100": 0.986,
+      "median_satellite_profit_points_of_initial100": 1.058,
+      "mean_delta_vs_lump_points": 0.0,
+      "mean_delta_vs_DCA_points": -0.054,
+      "win_fraction_vs_lump": 0.0,
+      "avg_full_maxDD_pct": -2.753,
+      "worst_full_maxDD_pct": -7.554,
+      "mean_trades": 47.1,
+      "avg_correction_exits": 0,
+      "mean_cap_trim_count": 46.1
     },
     {
       "policy": "B1_DCA",
-      "cost_per_side_bps": 10.0,
-      "bars": 2980,
-      "training": {
-        "total_return_pct": 25.414,
-        "cagr_pct": 2.115,
-        "max_drawdown_pct": -3.156,
-        "volatility_pct": 2.245,
-        "sharpe_rf0": 0.943,
-        "longest_underwater_trading_days": 708
-      },
-      "holdout": {
-        "total_return_pct": -2.871,
-        "cagr_pct": -2.871,
-        "max_drawdown_pct": -11.281,
-        "volatility_pct": 8.559,
-        "sharpe_rf0": -0.298,
-        "longest_underwater_trading_days": 190
-      },
-      "full": {
-        "total_return_pct": 21.813,
-        "cagr_pct": 1.683,
-        "max_drawdown_pct": -11.281,
-        "volatility_pct": 3.285,
-        "sharpe_rf0": 0.525,
-        "longest_underwater_trading_days": 708
-      },
-      "sleeve_pnl_initial100": 1.714,
-      "trades": 63,
-      "buy_count": 6,
-      "sell_count": 57,
-      "correction_exit_count": 0,
-      "cap_trim_count": 57,
-      "closing_gold_weight_pct": 24.639,
-      "gold_weight_exceed_15_days": 936,
-      "core_alone_exceed_15_days": 891
+      "windows": 10,
+      "average_satellite_profit_points_of_initial100": 1.04,
+      "median_satellite_profit_points_of_initial100": 1.064,
+      "mean_delta_vs_lump_points": 0.054,
+      "mean_delta_vs_DCA_points": 0.0,
+      "win_fraction_vs_lump": 0.6,
+      "avg_full_maxDD_pct": -2.705,
+      "worst_full_maxDD_pct": -7.56,
+      "mean_trades": 48.4,
+      "avg_correction_exits": 0,
+      "mean_cap_trim_count": 42.6
     },
     {
       "policy": "B2_cash",
-      "cost_per_side_bps": 10.0,
-      "bars": 2980,
-      "training": {
-        "total_return_pct": 23.689,
-        "cagr_pct": 1.984,
-        "max_drawdown_pct": -3.206,
-        "volatility_pct": 2.104,
-        "sharpe_rf0": 0.945,
-        "longest_underwater_trading_days": 708
-      },
-      "holdout": {
-        "total_return_pct": -2.911,
-        "cagr_pct": -2.911,
-        "max_drawdown_pct": -11.423,
-        "volatility_pct": 8.673,
-        "sharpe_rf0": -0.297,
-        "longest_underwater_trading_days": 190
-      },
-      "full": {
-        "total_return_pct": 20.089,
-        "cagr_pct": 1.561,
-        "max_drawdown_pct": -11.423,
-        "volatility_pct": 3.224,
-        "sharpe_rf0": 0.496,
-        "longest_underwater_trading_days": 708
-      },
-      "sleeve_pnl_initial100": 0.0,
-      "trades": 0,
-      "buy_count": 0,
-      "sell_count": 0,
-      "correction_exit_count": 0,
-      "cap_trim_count": 0,
-      "closing_gold_weight_pct": 24.991,
-      "gold_weight_exceed_15_days": 904,
-      "core_alone_exceed_15_days": 903
+      "windows": 10,
+      "average_satellite_profit_points_of_initial100": 0.0,
+      "median_satellite_profit_points_of_initial100": 0.0,
+      "mean_delta_vs_lump_points": -0.986,
+      "mean_delta_vs_DCA_points": -1.04,
+      "win_fraction_vs_lump": 0.0,
+      "avg_full_maxDD_pct": -2.417,
+      "worst_full_maxDD_pct": -7.641,
+      "mean_trades": 0,
+      "avg_correction_exits": 0,
+      "mean_cap_trim_count": 0
     },
     {
       "policy": "S1_TSMOM252",
-      "cost_per_side_bps": 10.0,
-      "bars": 2980,
-      "training": {
-        "total_return_pct": 24.747,
-        "cagr_pct": 2.064,
-        "max_drawdown_pct": -3.184,
-        "volatility_pct": 2.206,
-        "sharpe_rf0": 0.938,
-        "longest_underwater_trading_days": 714
-      },
-      "holdout": {
-        "total_return_pct": -2.886,
-        "cagr_pct": -2.886,
-        "max_drawdown_pct": -11.335,
-        "volatility_pct": 8.602,
-        "sharpe_rf0": -0.297,
-        "longest_underwater_trading_days": 190
-      },
-      "full": {
-        "total_return_pct": 21.146,
-        "cagr_pct": 1.636,
-        "max_drawdown_pct": -11.335,
-        "volatility_pct": 3.271,
-        "sharpe_rf0": 0.513,
-        "longest_underwater_trading_days": 714
-      },
-      "sleeve_pnl_initial100": 1.0563,
-      "trades": 202,
-      "buy_count": 32,
-      "sell_count": 170,
-      "correction_exit_count": 0,
-      "cap_trim_count": 142,
-      "closing_gold_weight_pct": 24.773,
-      "gold_weight_exceed_15_days": 1001,
-      "core_alone_exceed_15_days": 898
+      "windows": 10,
+      "average_satellite_profit_points_of_initial100": 0.735,
+      "median_satellite_profit_points_of_initial100": 0.863,
+      "mean_delta_vs_lump_points": -0.251,
+      "mean_delta_vs_DCA_points": -0.305,
+      "win_fraction_vs_lump": 0.1,
+      "avg_full_maxDD_pct": -2.697,
+      "worst_full_maxDD_pct": -7.553,
+      "mean_trades": 70.5,
+      "avg_correction_exits": 0,
+      "mean_cap_trim_count": 53
     },
     {
       "policy": "S2_DONCHIAN55_20",
-      "cost_per_side_bps": 10.0,
-      "bars": 2980,
-      "training": {
-        "total_return_pct": 24.01,
-        "cagr_pct": 2.008,
-        "max_drawdown_pct": -3.197,
-        "volatility_pct": 2.183,
-        "sharpe_rf0": 0.922,
-        "longest_underwater_trading_days": 718
-      },
-      "holdout": {
-        "total_return_pct": -2.903,
-        "cagr_pct": -2.903,
-        "max_drawdown_pct": -11.396,
-        "volatility_pct": 8.651,
-        "sharpe_rf0": -0.297,
-        "longest_underwater_trading_days": 190
-      },
-      "full": {
-        "total_return_pct": 20.409,
-        "cagr_pct": 1.584,
-        "max_drawdown_pct": -11.396,
-        "volatility_pct": 3.268,
-        "sharpe_rf0": 0.497,
-        "longest_underwater_trading_days": 718
-      },
-      "sleeve_pnl_initial100": 0.3201,
-      "trades": 153,
-      "buy_count": 18,
-      "sell_count": 135,
-      "correction_exit_count": 0,
-      "cap_trim_count": 119,
-      "closing_gold_weight_pct": 24.924,
-      "gold_weight_exceed_15_days": 984,
-      "core_alone_exceed_15_days": 901
+      "windows": 10,
+      "average_satellite_profit_points_of_initial100": 0.384,
+      "median_satellite_profit_points_of_initial100": 0.451,
+      "mean_delta_vs_lump_points": -0.602,
+      "mean_delta_vs_DCA_points": -0.655,
+      "win_fraction_vs_lump": 0.0,
+      "avg_full_maxDD_pct": -2.616,
+      "worst_full_maxDD_pct": -7.595,
+      "mean_trades": 59.9,
+      "avg_correction_exits": 0,
+      "mean_cap_trim_count": 48.4
     },
     {
       "policy": "S3_MA50_200",
-      "cost_per_side_bps": 10.0,
-      "bars": 2980,
-      "training": {
-        "total_return_pct": 24.772,
-        "cagr_pct": 2.066,
-        "max_drawdown_pct": -3.188,
-        "volatility_pct": 2.19,
-        "sharpe_rf0": 0.945,
-        "longest_underwater_trading_days": 718
-      },
-      "holdout": {
-        "total_return_pct": -2.886,
-        "cagr_pct": -2.886,
-        "max_drawdown_pct": -11.333,
-        "volatility_pct": 8.601,
-        "sharpe_rf0": -0.297,
-        "longest_underwater_trading_days": 190
-      },
-      "full": {
-        "total_return_pct": 21.171,
-        "cagr_pct": 1.638,
-        "max_drawdown_pct": -11.333,
-        "volatility_pct": 3.26,
-        "sharpe_rf0": 0.515,
-        "longest_underwater_trading_days": 718
-      },
-      "sleeve_pnl_initial100": 1.0815,
-      "trades": 175,
-      "buy_count": 25,
-      "sell_count": 150,
-      "correction_exit_count": 0,
-      "cap_trim_count": 129,
-      "closing_gold_weight_pct": 24.768,
-      "gold_weight_exceed_15_days": 989,
-      "core_alone_exceed_15_days": 898
+      "windows": 10,
+      "average_satellite_profit_points_of_initial100": 0.764,
+      "median_satellite_profit_points_of_initial100": 0.864,
+      "mean_delta_vs_lump_points": -0.222,
+      "mean_delta_vs_DCA_points": -0.276,
+      "win_fraction_vs_lump": 0.4,
+      "avg_full_maxDD_pct": -2.654,
+      "worst_full_maxDD_pct": -7.553,
+      "mean_trades": 66.4,
+      "avg_correction_exits": 0,
+      "mean_cap_trim_count": 52.6
     },
     {
       "policy": "S1_TSMOM252_ATR",
-      "cost_per_side_bps": 10.0,
-      "bars": 2980,
-      "training": {
-        "total_return_pct": 24.607,
-        "cagr_pct": 2.054,
-        "max_drawdown_pct": -3.292,
-        "volatility_pct": 2.192,
-        "sharpe_rf0": 0.939,
-        "longest_underwater_trading_days": 718
-      },
-      "holdout": {
-        "total_return_pct": -2.889,
-        "cagr_pct": -2.889,
-        "max_drawdown_pct": -11.346,
-        "volatility_pct": 8.612,
-        "sharpe_rf0": -0.297,
-        "longest_underwater_trading_days": 190
-      },
-      "full": {
-        "total_return_pct": 21.007,
-        "cagr_pct": 1.626,
-        "max_drawdown_pct": -11.346,
-        "volatility_pct": 3.264,
-        "sharpe_rf0": 0.511,
-        "longest_underwater_trading_days": 718
-      },
-      "sleeve_pnl_initial100": 0.9172,
-      "trades": 426,
-      "buy_count": 73,
-      "sell_count": 353,
-      "correction_exit_count": 47,
-      "cap_trim_count": 283,
-      "closing_gold_weight_pct": 24.801,
-      "gold_weight_exceed_15_days": 1125,
-      "core_alone_exceed_15_days": 899
+      "windows": 10,
+      "average_satellite_profit_points_of_initial100": 0.534,
+      "median_satellite_profit_points_of_initial100": 0.55,
+      "mean_delta_vs_lump_points": -0.451,
+      "mean_delta_vs_DCA_points": -0.505,
+      "win_fraction_vs_lump": 0.0,
+      "avg_full_maxDD_pct": -2.772,
+      "worst_full_maxDD_pct": -7.591,
+      "mean_trades": 149.7,
+      "avg_correction_exits": 18.5,
+      "mean_cap_trim_count": 99.1
     },
     {
       "policy": "S2_DONCHIAN55_20_ATR",
-      "cost_per_side_bps": 10.0,
-      "bars": 2980,
-      "training": {
-        "total_return_pct": 24.049,
-        "cagr_pct": 2.011,
-        "max_drawdown_pct": -3.196,
-        "volatility_pct": 2.147,
-        "sharpe_rf0": 0.938,
-        "longest_underwater_trading_days": 713
-      },
-      "holdout": {
-        "total_return_pct": -2.902,
-        "cagr_pct": -2.902,
-        "max_drawdown_pct": -11.393,
-        "volatility_pct": 8.649,
-        "sharpe_rf0": -0.297,
-        "longest_underwater_trading_days": 190
-      },
-      "full": {
-        "total_return_pct": 20.448,
-        "cagr_pct": 1.586,
-        "max_drawdown_pct": -11.393,
-        "volatility_pct": 3.245,
-        "sharpe_rf0": 0.501,
-        "longest_underwater_trading_days": 713
-      },
-      "sleeve_pnl_initial100": 0.3591,
-      "trades": 144,
-      "buy_count": 25,
-      "sell_count": 119,
-      "correction_exit_count": 23,
-      "cap_trim_count": 96,
-      "closing_gold_weight_pct": 24.916,
-      "gold_weight_exceed_15_days": 974,
-      "core_alone_exceed_15_days": 901
+      "windows": 10,
+      "average_satellite_profit_points_of_initial100": 0.213,
+      "median_satellite_profit_points_of_initial100": 0.268,
+      "mean_delta_vs_lump_points": -0.772,
+      "mean_delta_vs_DCA_points": -0.826,
+      "win_fraction_vs_lump": 0.0,
+      "avg_full_maxDD_pct": -2.502,
+      "worst_full_maxDD_pct": -7.612,
+      "mean_trades": 56.2,
+      "avg_correction_exits": 8.7,
+      "mean_cap_trim_count": 38.2
     },
     {
       "policy": "S3_MA50_200_ATR",
-      "cost_per_side_bps": 10.0,
-      "bars": 2980,
-      "training": {
-        "total_return_pct": 24.473,
-        "cagr_pct": 2.044,
-        "max_drawdown_pct": -3.221,
-        "volatility_pct": 2.175,
-        "sharpe_rf0": 0.941,
-        "longest_underwater_trading_days": 718
-      },
-      "holdout": {
-        "total_return_pct": -2.893,
-        "cagr_pct": -2.893,
-        "max_drawdown_pct": -11.358,
-        "volatility_pct": 8.62,
-        "sharpe_rf0": -0.297,
-        "longest_underwater_trading_days": 190
-      },
-      "full": {
-        "total_return_pct": 20.873,
-        "cagr_pct": 1.617,
-        "max_drawdown_pct": -11.358,
-        "volatility_pct": 3.256,
-        "sharpe_rf0": 0.509,
-        "longest_underwater_trading_days": 718
-      },
-      "sleeve_pnl_initial100": 0.7833,
-      "trades": 309,
-      "buy_count": 50,
-      "sell_count": 259,
-      "correction_exit_count": 36,
-      "cap_trim_count": 212,
-      "closing_gold_weight_pct": 24.829,
-      "gold_weight_exceed_15_days": 1066,
-      "core_alone_exceed_15_days": 899
+      "windows": 10,
+      "average_satellite_profit_points_of_initial100": 0.545,
+      "median_satellite_profit_points_of_initial100": 0.55,
+      "mean_delta_vs_lump_points": -0.441,
+      "mean_delta_vs_DCA_points": -0.494,
+      "win_fraction_vs_lump": 0.0,
+      "avg_full_maxDD_pct": -2.68,
+      "worst_full_maxDD_pct": -7.591,
+      "mean_trades": 124.8,
+      "avg_correction_exits": 15.2,
+      "mean_cap_trim_count": 86.9
     }
   ],
   "sensitivity_5bps": {
     "S1_TSMOM252": {
-      "total_return_pct": -2.885,
-      "cagr_pct": -2.885,
-      "max_drawdown_pct": -11.329,
-      "volatility_pct": 8.598,
-      "sharpe_rf0": -0.297,
+      "total_return_pct": -1.865,
+      "cagr_pct": -1.865,
+      "max_drawdown_pct": -7.556,
+      "volatility_pct": 5.633,
+      "sharpe_rf0": -0.306,
       "longest_underwater_trading_days": 190
     },
     "S2_DONCHIAN55_20": {
-      "total_return_pct": -2.903,
-      "cagr_pct": -2.903,
-      "max_drawdown_pct": -11.395,
-      "volatility_pct": 8.65,
-      "sharpe_rf0": -0.297,
+      "total_return_pct": -1.875,
+      "cagr_pct": -1.875,
+      "max_drawdown_pct": -7.597,
+      "volatility_pct": 5.664,
+      "sharpe_rf0": -0.306,
       "longest_underwater_trading_days": 190
     },
     "S3_MA50_200": {
-      "total_return_pct": -2.885,
-      "cagr_pct": -2.885,
-      "max_drawdown_pct": -11.329,
-      "volatility_pct": 8.598,
-      "sharpe_rf0": -0.297,
+      "total_return_pct": -1.865,
+      "cagr_pct": -1.865,
+      "max_drawdown_pct": -7.556,
+      "volatility_pct": 5.633,
+      "sharpe_rf0": -0.306,
       "longest_underwater_trading_days": 190
     },
     "S1_TSMOM252_ATR": {
-      "total_return_pct": -2.885,
-      "cagr_pct": -2.885,
-      "max_drawdown_pct": -11.33,
-      "volatility_pct": 8.598,
-      "sharpe_rf0": -0.297,
+      "total_return_pct": -1.874,
+      "cagr_pct": -1.874,
+      "max_drawdown_pct": -7.59,
+      "volatility_pct": 5.659,
+      "sharpe_rf0": -0.306,
       "longest_underwater_trading_days": 190
     },
     "S2_DONCHIAN55_20_ATR": {
-      "total_return_pct": -2.902,
-      "cagr_pct": -2.902,
-      "max_drawdown_pct": -11.39,
-      "volatility_pct": 8.646,
-      "sharpe_rf0": -0.297,
+      "total_return_pct": -1.88,
+      "cagr_pct": -1.88,
+      "max_drawdown_pct": -7.614,
+      "volatility_pct": 5.677,
+      "sharpe_rf0": -0.306,
       "longest_underwater_trading_days": 190
     },
     "S3_MA50_200_ATR": {
-      "total_return_pct": -2.89,
-      "cagr_pct": -2.89,
-      "max_drawdown_pct": -11.348,
-      "volatility_pct": 8.613,
-      "sharpe_rf0": -0.297,
+      "total_return_pct": -1.874,
+      "cagr_pct": -1.874,
+      "max_drawdown_pct": -7.59,
+      "volatility_pct": 5.659,
+      "sharpe_rf0": -0.306,
       "longest_underwater_trading_days": 190
     }
   },
   "sensitivity_20bps": {
     "S1_TSMOM252": {
-      "total_return_pct": -2.889,
-      "cagr_pct": -2.889,
-      "max_drawdown_pct": -11.346,
-      "volatility_pct": 8.611,
-      "sharpe_rf0": -0.297,
+      "total_return_pct": -1.863,
+      "cagr_pct": -1.863,
+      "max_drawdown_pct": -7.548,
+      "volatility_pct": 5.627,
+      "sharpe_rf0": -0.306,
       "longest_underwater_trading_days": 190
     },
     "S2_DONCHIAN55_20": {
-      "total_return_pct": -2.904,
-      "cagr_pct": -2.904,
-      "max_drawdown_pct": -11.4,
-      "volatility_pct": 8.654,
-      "sharpe_rf0": -0.297,
+      "total_return_pct": -1.874,
+      "cagr_pct": -1.874,
+      "max_drawdown_pct": -7.591,
+      "volatility_pct": 5.66,
+      "sharpe_rf0": -0.306,
       "longest_underwater_trading_days": 190
     },
     "S3_MA50_200": {
-      "total_return_pct": -2.888,
-      "cagr_pct": -2.888,
-      "max_drawdown_pct": -11.34,
-      "volatility_pct": 8.606,
-      "sharpe_rf0": -0.297,
+      "total_return_pct": -1.863,
+      "cagr_pct": -1.863,
+      "max_drawdown_pct": -7.548,
+      "volatility_pct": 5.627,
+      "sharpe_rf0": -0.306,
       "longest_underwater_trading_days": 190
     },
     "S1_TSMOM252_ATR": {
-      "total_return_pct": -2.899,
-      "cagr_pct": -2.899,
-      "max_drawdown_pct": -11.379,
-      "volatility_pct": 8.638,
-      "sharpe_rf0": -0.297,
+      "total_return_pct": -1.875,
+      "cagr_pct": -1.875,
+      "max_drawdown_pct": -7.593,
+      "volatility_pct": 5.662,
+      "sharpe_rf0": -0.306,
       "longest_underwater_trading_days": 190
     },
     "S2_DONCHIAN55_20_ATR": {
-      "total_return_pct": -2.904,
-      "cagr_pct": -2.904,
-      "max_drawdown_pct": -11.399,
-      "volatility_pct": 8.654,
-      "sharpe_rf0": -0.297,
+      "total_return_pct": -1.879,
+      "cagr_pct": -1.879,
+      "max_drawdown_pct": -7.609,
+      "volatility_pct": 5.673,
+      "sharpe_rf0": -0.306,
       "longest_underwater_trading_days": 190
     },
     "S3_MA50_200_ATR": {
-      "total_return_pct": -2.898,
-      "cagr_pct": -2.898,
-      "max_drawdown_pct": -11.376,
-      "volatility_pct": 8.635,
-      "sharpe_rf0": -0.297,
+      "total_return_pct": -1.875,
+      "cagr_pct": -1.875,
+      "max_drawdown_pct": -7.593,
+      "volatility_pct": 5.662,
+      "sharpe_rf0": -0.306,
       "longest_underwater_trading_days": 190
     }
   },
   "one_extra_day_delay": {
     "S1_TSMOM252": {
-      "total_return_pct": -2.884,
-      "cagr_pct": -2.884,
-      "max_drawdown_pct": -11.326,
-      "volatility_pct": 8.595,
-      "sharpe_rf0": -0.297,
+      "total_return_pct": -1.864,
+      "cagr_pct": -1.864,
+      "max_drawdown_pct": -7.553,
+      "volatility_pct": 5.631,
+      "sharpe_rf0": -0.306,
       "longest_underwater_trading_days": 190
     },
     "S2_DONCHIAN55_20": {
-      "total_return_pct": -2.904,
-      "cagr_pct": -2.904,
-      "max_drawdown_pct": -11.4,
-      "volatility_pct": 8.654,
-      "sharpe_rf0": -0.297,
+      "total_return_pct": -1.875,
+      "cagr_pct": -1.875,
+      "max_drawdown_pct": -7.597,
+      "volatility_pct": 5.664,
+      "sharpe_rf0": -0.306,
       "longest_underwater_trading_days": 190
     },
     "S3_MA50_200": {
-      "total_return_pct": -2.892,
-      "cagr_pct": -2.892,
-      "max_drawdown_pct": -11.354,
-      "volatility_pct": 8.618,
-      "sharpe_rf0": -0.297,
+      "total_return_pct": -1.864,
+      "cagr_pct": -1.864,
+      "max_drawdown_pct": -7.553,
+      "volatility_pct": 5.631,
+      "sharpe_rf0": -0.306,
       "longest_underwater_trading_days": 190
     },
     "S1_TSMOM252_ATR": {
-      "total_return_pct": -2.88,
-      "cagr_pct": -2.88,
-      "max_drawdown_pct": -11.311,
-      "volatility_pct": 8.584,
-      "sharpe_rf0": -0.297,
+      "total_return_pct": -1.876,
+      "cagr_pct": -1.876,
+      "max_drawdown_pct": -7.6,
+      "volatility_pct": 5.667,
+      "sharpe_rf0": -0.306,
       "longest_underwater_trading_days": 190
     },
     "S2_DONCHIAN55_20_ATR": {
-      "total_return_pct": -2.91,
-      "cagr_pct": -2.91,
-      "max_drawdown_pct": -11.422,
-      "volatility_pct": 8.672,
-      "sharpe_rf0": -0.297,
+      "total_return_pct": -1.883,
+      "cagr_pct": -1.883,
+      "max_drawdown_pct": -7.624,
+      "volatility_pct": 5.685,
+      "sharpe_rf0": -0.306,
       "longest_underwater_trading_days": 190
     },
     "S3_MA50_200_ATR": {
-      "total_return_pct": -2.881,
-      "cagr_pct": -2.881,
-      "max_drawdown_pct": -11.317,
-      "volatility_pct": 8.588,
-      "sharpe_rf0": -0.297,
+      "total_return_pct": -1.876,
+      "cagr_pct": -1.876,
+      "max_drawdown_pct": -7.6,
+      "volatility_pct": 5.667,
+      "sharpe_rf0": -0.306,
       "longest_underwater_trading_days": 190
     }
   }
