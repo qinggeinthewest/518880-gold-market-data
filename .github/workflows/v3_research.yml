@@ -7,6 +7,7 @@ on:
     paths:
       - 'research/collect_history.py'
       - 'research/v3_backtest.py'
+      - 'research/test_v3.py'
       - 'research/PROTOCOL_V3.md'
       - '.github/workflows/v3_research.yml'
 
@@ -28,6 +29,8 @@ jobs:
           python-version: '3.12'
       - name: Check Python syntax
         run: python -m py_compile research/collect_history.py research/v3_backtest.py
+      - name: Validate next-open signal and trading mechanics
+        run: python research/test_v3.py
       - name: Acquire and validate extended domestic ETF history
         run: python research/collect_history.py
       - name: Run pre-registered buy sell and correction comparisons
