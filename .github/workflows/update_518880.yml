@@ -1,0 +1,36 @@
+name: Update 518880 public market snapshot
+
+on:
+  workflow_dispatch:
+  schedule:
+    # UTC = Beijing minus eight hours; monitor 09-11 and 13-15 Beijing on weekdays.
+    # GitHub scheduled runs can be delayed; the script refuses stale quotes.
+    - cron: '17,27,47 1-3,5-7 * * 1-5'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: '518880-snapshot'
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Collect validated domestic market snapshot
+        run: python scripts/pull_snapshot.py
+      - name: Commit latest data when updated
+        run: |
+          git add docs/latest.json docs/latest.md
+          if git diff --cached --quiet; then
+            echo "No eligible fresh snapshot; nothing to publish."
+            exit 0
+          fi
+          git -c user.name='518880 Market Bot' -c user.email='518880-bot@users.noreply.github.com' commit -m 'Update 518880 quote snapshot'
+          git push
