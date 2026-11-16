@@ -31,3 +31,7 @@ Status: **RESEARCH ONLY**. No orders, no live strategy replacement, no claimed p
 - This research runs exclusively via `v3_research.yml` and writes only under `research/`.
 - **Do not modify** `scripts/pull_snapshot.py`, `.github/workflows/update_518880.yml`, or the live ChatGPT 518880 signal task until a method has passed the data and validation gates and the investor approves deployment.
 - No trading API keys, brokerage secrets, personal portfolio records or API passwords belong in this public repository.
+
+
+## Transparent methodology amendment: rolling-window initialization
+**Added after inspecting the first engineering run on 2026-11-16, NOT a pre-registered performance optimization.** The initial backtest held the same 10% gold core from 2014 to 2026 and allowed market appreciation to inflate core exposure past the intended 15% target, leaving many later years with no satellite capacity. This is not the investor's contemplated present-day decision. To correct that modeling error, V3 now evaluates **10 matched 756-trading-day windows** starting approximately a year apart, and includes a most-recent window; every window restarts at 10% gold core, 5% satellite cash and 85% other assets. Windows overlap, so the ten outcomes are **not ten independent statistical samples**. Holdout checks and corporate-action audits remain mandatory; these results cannot be described as pristine pre-registration. This change was made for portfolio comparability, not because it improved one selected signal.
