@@ -89,6 +89,22 @@ def main():
           'research_limitations':'Historical vendor data; corporate actions/distributions and total-return convention not independently reconciled.'}
     payload=json.dumps(data,ensure_ascii=False,indent=2)
     OUT.write_text(payload+'\n',encoding='utf-8')
+    # Independent cross-provider daily return check if both sources were obtained.
+    if len(candidates)>=2:
+        by_source={name:{v['date']:v['close'] for v in series} for series,name,_ in candidates}
+        if 'eastmoney_hfq' in by_source and 'sina_money_raw' in by_source:
+            ea=by_source['eastmoney_hfq'];sa=by_source['sina_money_raw']
+            common=sorted(set(ea)&set(sa))
+            ratios=[ea[d]/sa[d] for d in common if sa[d]>0]
+            rel=[abs(ea[d]/sa[d]-1) for d in common if sa[d]>0]
+            status['cross_provider_audit']={
+                'common_dates':len(common),
+                'max_price_relative_difference_pct':round(max(rel,default=0)*100,5),
+                'ratio_min':round(min(ratios,default=0),6),
+                'ratio_max':round(max(ratios,default=0),6),
+                'ratio_constant_within_0_1pct':(max(ratios,default=0)-min(ratios,default=0))<0.001,
+                'note':'A consistent price-adjustment factor is evidence of continuity; it does not independently prove dividend history.'
+            }
     status.update({'source':source,'adjustment':adjustment,'bars':len(rows),
                    'first':rows[0]['date'],'last':rows[-1]['date'],'possible_price_discontinuities':jumps,
                    'sha256':hashlib.sha256(payload.encode()).hexdigest(),
