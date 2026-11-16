@@ -78,9 +78,16 @@ def main():
     if OUT.exists():
         try:
             prev=json.loads(OUT.read_text(encoding='utf-8'))
-            if len(prev.get('rows',[]))>len(rows) and prev.get('rows',[])[-1]['date']>=rows[-1]['date']:
-                rows=prev['rows'];source=prev['source'];adjustment=prev['adjustment']
-                status['retained_longer_archive']=True
+            oldrows=prev.get('rows',[])
+            oldsource=prev.get('source')
+            # An intermittent provider outage must not silently downgrade an
+            # equally fresh, longer, adjusted archive into raw fallback data.
+            preserve=bool(oldrows) and oldrows[-1]['date']>=rows[-1]['date'] and (
+                len(oldrows)>len(rows) or
+                (len(oldrows)>=len(rows) and oldsource=='eastmoney_hfq' and source!='eastmoney_hfq'))
+            if preserve:
+                rows=oldrows;source=oldsource;adjustment=prev['adjustment']
+                status['retained_preferred_archive']=True
         except Exception:pass
     jumps=[{'date':x['date'],'change':round(x['close']/rows[i-1]['close']-1,3)}
         for i,x in enumerate(rows) if i>0 and abs(x['close']/rows[i-1]['close']-1)>0.20]
