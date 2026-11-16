@@ -1,17 +1,19 @@
 {
-  "checked_at_utc": "2026-11-16T07:51:35.433651+00:00",
+  "checked_at_utc": "2026-11-16T07:53:17.204489+00:00",
   "sources_attempted": [
     "Eastmoney hfq",
     "Sina Money raw"
   ],
-  "errors": [],
+  "errors": [
+    "Eastmoney: RemoteDisconnected Remote end closed connection without response"
+  ],
   "ready": true,
-  "source": "eastmoney_hfq",
-  "adjustment": "hfq_as_published_needs_corporate_event_review",
+  "source": "sina_money_raw",
+  "adjustment": "unadjusted_needs_distribution_review",
   "bars": 3233,
   "first": "2013-07-29",
   "last": "2026-11-16",
   "possible_price_discontinuities": [],
-  "sha256": "2272996bbc78b7fc568139f27aa5860d226533d720dcd1d78d5c090109692e68",
+  "sha256": "569c30db41366916776272fcd9f7316f53ebf20fc8bc5795179964c8cb823729",
   "historically_adjusted_returns_verified": false
 }

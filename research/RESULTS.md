@@ -3,7 +3,7 @@
 ## Data gate
 - Status: **PROVISIONAL_UNAUDITED**
 - Notes: Matched rolling 3-year portfolios calculated. Historical returns/adjustments and distribution events not independently audited; overlapping windows are correlated.
-- Source: eastmoney_hfq; completed bars: 3233; adjustment: hfq_as_published_needs_corporate_event_review
+- Source: sina_money_raw; completed bars: 3233; adjustment: unadjusted_needs_distribution_review
 - Research only; NO orders or live strategy changes. Cash yield assumption = 0% p.a.
 - Signals are based on the previous completed close; all fills at the next session open; trading costs = 10 bps per side (assumed).
 - ETF distributions and adjust factors need independent audit. V2.0 MACRO data are incomplete; no faithful V2.0 numerical comparison yet.
@@ -19,9 +19,9 @@ Each window starts with a fresh portfolio of 10% ETF core + 5% satellite cash + 
 | S1_TSMOM252 | +0.735 | -0.251 | -0.305 | 10% | -2.70% | -7.55% | 70.5 |
 | S2_DONCHIAN55_20 | +0.384 | -0.602 | -0.655 | 0% | -2.62% | -7.59% | 59.9 |
 | S3_MA50_200 | +0.764 | -0.222 | -0.276 | 40% | -2.65% | -7.55% | 66.4 |
-| S1_TSMOM252_ATR | +0.534 | -0.451 | -0.505 | 0% | -2.77% | -7.59% | 149.7 |
+| S1_TSMOM252_ATR | +0.535 | -0.451 | -0.505 | 0% | -2.77% | -7.59% | 149.7 |
 | S2_DONCHIAN55_20_ATR | +0.213 | -0.772 | -0.826 | 0% | -2.50% | -7.61% | 56.2 |
-| S3_MA50_200_ATR | +0.545 | -0.441 | -0.494 | 0% | -2.68% | -7.59% | 124.8 |
+| S3_MA50_200_ATR | +0.545 | -0.440 | -0.494 | 0% | -2.68% | -7.59% | 124.8 |
 
 ## Rolling window coverage
 
