@@ -1,19 +1,25 @@
 {
-  "checked_at_utc": "2026-11-16T07:55:00.294755+00:00",
+  "checked_at_utc": "2026-11-16T07:57:42.994095+00:00",
   "sources_attempted": [
     "Eastmoney hfq",
     "Sina Money raw"
   ],
-  "errors": [
-    "Eastmoney: RemoteDisconnected Remote end closed connection without response"
-  ],
+  "errors": [],
   "ready": true,
-  "source": "sina_money_raw",
-  "adjustment": "unadjusted_needs_distribution_review",
+  "cross_provider_audit": {
+    "common_dates": 3233,
+    "max_price_relative_difference_pct": 0.02465,
+    "ratio_min": 1.0,
+    "ratio_max": 1.000247,
+    "ratio_constant_within_0_1pct": true,
+    "note": "A consistent price-adjustment factor is evidence of continuity; it does not independently prove dividend history."
+  },
+  "source": "eastmoney_hfq",
+  "adjustment": "hfq_as_published_needs_corporate_event_review",
   "bars": 3233,
   "first": "2013-07-29",
   "last": "2026-11-16",
   "possible_price_discontinuities": [],
-  "sha256": "ea352673f11bbba0dd59a415610a546adb5ec0e262239a6c6399d81e1c9924bf",
+  "sha256": "b923046bfe674248b6200138c8216ea3c65ac25498d18686ad894855a1a859bf",
   "historically_adjusted_returns_verified": false
 }
