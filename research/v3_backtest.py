@@ -54,7 +54,7 @@ def desired(rows,i,policy,holding):
         return p>long200 and ma(rows,i,50)>long200
     return None
 
-def simulate(rows,policy,cost=0.001,delay=0,start=N_WARMUP,end=None):
+def simulate(rows,policy,cost=0.001,delay=0,start=N_WARMUP,end=None,enforce_cap=True):
     if end is None:end=len(rows)
     if end-start<500:raise ValueError('Evaluation window too short')
     # 10% core + isolated 5% satellite cash + remaining 85% non-gold.
@@ -88,9 +88,9 @@ def simulate(rows,policy,cost=0.001,delay=0,start=N_WARMUP,end=None):
             trades.append({'date':r['date'],'side':'SELL','reason':reason,'price':p,'qty':sat})
             sat=0.0;peak_close=None;active_entry=None
         wealth=other_cash+core*p+sat_cash+sat*p
-        allowable=max(0,0.15*wealth-core*p)
+        allowable=max(0,0.15*wealth-core*p) if enforce_cap else max(0,sat_cash+sat*p)
         # Drift repair: sell satellite only; never silently sell long-term core.
-        if sat*p>allowable+1e-9:
+        if enforce_cap and sat*p>allowable+1e-9:
             sell_qty=min(sat,(sat*p-allowable)/p)
             sat-=sell_qty;sat_cash+=sell_qty*p*(1-cost)
             trades.append({'date':r['date'],'side':'SELL','reason':'CAP_TRIM','price':p,'qty':sell_qty})
@@ -114,7 +114,7 @@ def simulate(rows,policy,cost=0.001,delay=0,start=N_WARMUP,end=None):
         if sat>1e-10:peak_close=max(peak_close or r['close'],r['close'])
     train=equities[:-N_OOS];oos=equities[-N_OOS-1:]
     if len(train)<250:raise ValueError('Training segment too short')
-    out={'policy':policy,'start_date':rows[start]['date'],'end_date':rows[end-1]['date'],'cost_per_side_bps':cost*10000,'bars':len(equities),
+    out={'policy':policy,'cap_enforced':enforce_cap,'start_date':rows[start]['date'],'end_date':rows[end-1]['date'],'cost_per_side_bps':cost*10000,'bars':len(equities),
          'training':stats(train),'holdout':stats(oos),'full':stats(equities),
          'sleeve_pnl_initial100':round(sat_values[-1]-5,4),
          'trades':len(trades),'buy_count':sum(t['side']=='BUY' for t in trades),
@@ -162,7 +162,7 @@ def render(obj):
            '']
     if not obj.get('aggregate'):return '\n'.join(lines)+'\n'
     lines+=['## Matched rolling three-year windows',
-            'Each window starts with a fresh portfolio of 10% ETF core + 5% satellite cash + 85% other cash. Adjacent windows overlap and must NOT be treated as independent observations.',
+            'Each window starts with a fresh portfolio of 10% ETF core + 5% satellite cash + 85% other cash. The table isolates satellite signal skill **without dynamic cap trimming**, because cap-triggered churn otherwise dominates comparisons. A separate strict-cap stress profile is retained. Adjacent windows overlap and are NOT independent.',
             '',
             '| Strategy | Avg satellite P&L (portfolio pp) | vs immediate addition (pp) | vs DCA (pp) | Win share vs immediate | Avg max DD of total portfolio | Worst max DD | Avg trade count |',
             '|---|---:|---:|---:|---:|---:|---:|---:|']
@@ -175,7 +175,8 @@ def render(obj):
         lines.append(f"| {w['window_id']} | {w['start']} | {w['end']} |")
     lines+=['','## Interpretation / no premature winner','',
             '- Holdings acquired before the window start are not carried into subsequent windows: this removes artificial 13-year drift of the 10% core.',
-            '- The 15% exposure target can still be exceeded after sudden price moves; core-only violations are flagged, not silently sold.',
+            '- **Signal-study table does not enforce the 15% total portfolio cap.** It is NOT a deployable allocation strategy by itself. A separate constrained stress run is included in RESULTS.json.',
+            '- If long-term core exceeds 15% itself, a sell/rebalance policy is required for actual deployment; it is currently flagged rather than silently sold.',
             '- ATR correction is tested as a paired overlay, not presumed to improve performance.',
             '- **These outputs are provisional.** Independent validation of dividend/split treatment, macro-factor histories, rolling OOS and sensitivity to costs/latency is required before selecting a live signal.',
             '']
@@ -196,15 +197,16 @@ def main():
                 windows=[]
                 for z,start in enumerate(sorted(set(starts))):
                     end=start+length
-                    vals=[simulate(rows,p,start=start,end=end) for p in POLICIES]
+                    vals=[simulate(rows,p,start=start,end=end,enforce_cap=False) for p in POLICIES]
                     for o in vals:o.pop('trade_log',None)
                     windows.append({'window_id':z+1,'start':rows[start]['date'],'end':rows[end-1]['date'],'results':vals})
                 status.update({'status':'PROVISIONAL_UNAUDITED',
                   'notes':'Matched rolling 3-year portfolios calculated. Historical returns/adjustments and distribution events not independently audited; overlapping windows are correlated.',
                   'windows':windows,'aggregate':aggregate_windows(windows),
-                  'sensitivity_5bps':{p:simulate(rows,p,cost=0.0005,start=starts[-1],end=starts[-1]+length)['holdout'] for p in POLICIES if p.startswith('S')},
-                  'sensitivity_20bps':{p:simulate(rows,p,cost=0.002,start=starts[-1],end=starts[-1]+length)['holdout'] for p in POLICIES if p.startswith('S')},
-                  'one_extra_day_delay':{p:simulate(rows,p,delay=1,start=starts[-1],end=starts[-1]+length)['holdout'] for p in POLICIES if p.startswith('S')}})
+                  'policy_cap_stress':{p:simulate(rows,p,start=starts[-1],end=starts[-1]+length,enforce_cap=True) for p in POLICIES},
+                  'sensitivity_5bps':{p:simulate(rows,p,cost=0.0005,start=starts[-1],end=starts[-1]+length,enforce_cap=False)['holdout'] for p in POLICIES if p.startswith('S')},
+                  'sensitivity_20bps':{p:simulate(rows,p,cost=0.002,start=starts[-1],end=starts[-1]+length,enforce_cap=False)['holdout'] for p in POLICIES if p.startswith('S')},
+                  'one_extra_day_delay':{p:simulate(rows,p,delay=1,start=starts[-1],end=starts[-1]+length,enforce_cap=False)['holdout'] for p in POLICIES if p.startswith('S')}})
             except Exception as e:status.update({'status':'ERROR','notes':f'{type(e).__name__}: {e}'})
         else:status.update({'notes':'Fewer than 1100 completed sessions; minimum multiwindow study cannot proceed.'})
     (ROOT/'RESULTS.json').write_text(json.dumps(status,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
