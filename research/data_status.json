@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-16T07:57:42.994095+00:00",
+  "checked_at_utc": "2026-11-16T08:00:14.399246+00:00",
   "sources_attempted": [
     "Eastmoney hfq",
     "Sina Money raw"
@@ -20,6 +20,6 @@
   "first": "2013-07-29",
   "last": "2026-11-16",
   "possible_price_discontinuities": [],
-  "sha256": "b923046bfe674248b6200138c8216ea3c65ac25498d18686ad894855a1a859bf",
+  "sha256": "74284839b8270db78fb621edb5940509c42d1e42c425f4df6cbaeaec444e5ead",
   "historically_adjusted_returns_verified": false
 }

@@ -9,19 +9,19 @@
 - ETF distributions and adjust factors need independent audit. V2.0 MACRO data are incomplete; no faithful V2.0 numerical comparison yet.
 
 ## Matched rolling three-year windows
-Each window starts with a fresh portfolio of 10% ETF core + 5% satellite cash + 85% other cash. Adjacent windows overlap and must NOT be treated as independent observations.
+Each window starts with a fresh portfolio of 10% ETF core + 5% satellite cash + 85% other cash. The table isolates satellite signal skill **without dynamic cap trimming**, because cap-triggered churn otherwise dominates comparisons. A separate strict-cap stress profile is retained. Adjacent windows overlap and are NOT independent.
 
 | Strategy | Avg satellite P&L (portfolio pp) | vs immediate addition (pp) | vs DCA (pp) | Win share vs immediate | Avg max DD of total portfolio | Worst max DD | Avg trade count |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| B0_lump | +0.986 | +0.000 | -0.054 | 0% | -2.75% | -7.55% | 47.1 |
-| B1_DCA | +1.040 | +0.054 | +0.000 | 60% | -2.71% | -7.56% | 48.4 |
-| B2_cash | +0.000 | -0.986 | -1.040 | 0% | -2.42% | -7.64% | 0.0 |
-| S1_TSMOM252 | +0.735 | -0.251 | -0.305 | 10% | -2.70% | -7.55% | 70.5 |
-| S2_DONCHIAN55_20 | +0.384 | -0.602 | -0.655 | 0% | -2.62% | -7.59% | 59.9 |
-| S3_MA50_200 | +0.764 | -0.222 | -0.276 | 40% | -2.65% | -7.55% | 66.4 |
-| S1_TSMOM252_ATR | +0.534 | -0.451 | -0.505 | 0% | -2.77% | -7.59% | 149.7 |
-| S2_DONCHIAN55_20_ATR | +0.213 | -0.772 | -0.826 | 0% | -2.50% | -7.61% | 56.2 |
-| S3_MA50_200_ATR | +0.545 | -0.441 | -0.494 | 0% | -2.68% | -7.59% | 124.8 |
+| B0_lump | +2.122 | +0.000 | -0.010 | 0% | -3.50% | -10.72% | 1.0 |
+| B1_DCA | +2.132 | +0.010 | +0.000 | 50% | -3.44% | -10.66% | 6.0 |
+| B2_cash | +0.000 | -2.122 | -2.132 | 0% | -2.42% | -7.64% | 0.0 |
+| S1_TSMOM252 | +1.781 | -0.341 | -0.351 | 10% | -3.40% | -10.46% | 16.0 |
+| S2_DONCHIAN55_20 | +0.886 | -1.236 | -1.246 | 0% | -3.03% | -9.20% | 12.3 |
+| S3_MA50_200 | +1.969 | -0.153 | -0.163 | 30% | -3.21% | -9.48% | 12.5 |
+| S1_TSMOM252_ATR | +1.028 | -1.094 | -1.104 | 0% | -3.29% | -9.48% | 55.2 |
+| S2_DONCHIAN55_20_ATR | +0.407 | -1.715 | -1.725 | 0% | -2.76% | -8.79% | 20.1 |
+| S3_MA50_200_ATR | +1.164 | -0.958 | -0.968 | 0% | -3.09% | -8.73% | 41.5 |
 
 ## Rolling window coverage
 
@@ -41,6 +41,7 @@ Each window starts with a fresh portfolio of 10% ETF core + 5% satellite cash + 
 ## Interpretation / no premature winner
 
 - Holdings acquired before the window start are not carried into subsequent windows: this removes artificial 13-year drift of the 10% core.
-- The 15% exposure target can still be exceeded after sudden price moves; core-only violations are flagged, not silently sold.
+- **Signal-study table does not enforce the 15% total portfolio cap.** It is NOT a deployable allocation strategy by itself. A separate constrained stress run is included in RESULTS.json.
+- If long-term core exceeds 15% itself, a sell/rebalance policy is required for actual deployment; it is currently flagged rather than silently sold.
 - ATR correction is tested as a paired overlay, not presumed to improve performance.
 - **These outputs are provisional.** Independent validation of dividend/split treatment, macro-factor histories, rolling OOS and sensitivity to costs/latency is required before selecting a live signal.
