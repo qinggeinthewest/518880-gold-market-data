@@ -54,15 +54,17 @@ def desired(rows,i,policy,holding):
         return p>long200 and ma(rows,i,50)>long200
     return None
 
-def simulate(rows,policy,cost=0.001,delay=0):
+def simulate(rows,policy,cost=0.001,delay=0,start=N_WARMUP,end=None):
+    if end is None:end=len(rows)
+    if end-start<500:raise ValueError('Evaluation window too short')
     # 10% core + isolated 5% satellite cash + remaining 85% non-gold.
     # Real-cost cash debits are at next session open; no borrowed cash.
     core=0.0;sat=0.0;sat_cash=5.0;other_cash=85.0;core_cash=10.0
     peak_close=None; cooldown=-1;trades=[];equities=[];sat_values=[]
     cap_breach_days=0;core_cap_days=0;atr=atr14(rows);entry_mae=[]
     active_entry=None
-    for i in range(N_WARMUP,len(rows)):
-        r=rows[i];p=r['open'];idx=i-N_WARMUP
+    for i in range(start,end):
+        r=rows[i];p=r['open'];idx=i-start
         if core==0.0:
             core=core_cash/(p*(1+cost));core_cash=0.0
         prior_i=i-1-delay
@@ -112,7 +114,7 @@ def simulate(rows,policy,cost=0.001,delay=0):
         if sat>1e-10:peak_close=max(peak_close or r['close'],r['close'])
     train=equities[:-N_OOS];oos=equities[-N_OOS-1:]
     if len(train)<250:raise ValueError('Training segment too short')
-    out={'policy':policy,'cost_per_side_bps':cost*10000,'bars':len(equities),
+    out={'policy':policy,'start_date':rows[start]['date'],'end_date':rows[end-1]['date'],'cost_per_side_bps':cost*10000,'bars':len(equities),
          'training':stats(train),'holdout':stats(oos),'full':stats(equities),
          'sleeve_pnl_initial100':round(sat_values[-1]-5,4),
          'trades':len(trades),'buy_count':sum(t['side']=='BUY' for t in trades),
@@ -124,50 +126,88 @@ def simulate(rows,policy,cost=0.001,delay=0):
          'trade_log':trades}
     return out
 
+def aggregate_windows(windows):
+    # Scores refer to the same start date and cash/ETF core for every candidate.
+    base={w['window_id']:next(x for x in w['results'] if x['policy']=='B0_lump') for w in windows}
+    dca={w['window_id']:next(x for x in w['results'] if x['policy']=='B1_DCA') for w in windows}
+    names=[v['policy'] for v in windows[0]['results']]
+    agg=[]
+    for name in names:
+        entries=[(w,next(x for x in w['results'] if x['policy']==name)) for w in windows]
+        sleeve=[x['sleeve_pnl_initial100'] for w,x in entries]
+        advantages=[x['sleeve_pnl_initial100']-base[w['window_id']]['sleeve_pnl_initial100'] for w,x in entries]
+        advantages_dca=[x['sleeve_pnl_initial100']-dca[w['window_id']]['sleeve_pnl_initial100'] for w,x in entries]
+        agg.append({'policy':name,'windows':len(entries),
+          'average_satellite_profit_points_of_initial100':round(statistics.mean(sleeve),3),
+          'median_satellite_profit_points_of_initial100':round(statistics.median(sleeve),3),
+          'mean_delta_vs_lump_points':round(statistics.mean(advantages),3),
+          'mean_delta_vs_DCA_points':round(statistics.mean(advantages_dca),3),
+          'win_fraction_vs_lump':round(sum(x>0 for x in advantages)/len(advantages),3),
+          'avg_full_maxDD_pct':round(statistics.mean(x['full']['max_drawdown_pct'] for w,x in entries),3),
+          'worst_full_maxDD_pct':round(min(x['full']['max_drawdown_pct'] for w,x in entries),3),
+          'mean_trades':round(statistics.mean(x['trades'] for w,x in entries),1),
+          'avg_correction_exits':round(statistics.mean(x['correction_exit_count'] for w,x in entries),1),
+          'mean_cap_trim_count':round(statistics.mean(x['cap_trim_count'] for w,x in entries),1)})
+    return agg
+
 def render(obj):
-    lines=['# V3.0 518880 backtest — automated, research only','',
-           '## Data and validation','',
+    lines=['# V3.0 independent research: BUY / SELL / ERROR-CORRECTION',
+           '','## Data gate',
            f"- Status: **{obj['status']}**",
            f"- Notes: {obj['notes']}",
-           f"- Data: {obj.get('source','n/a')}, {obj.get('bars',0)} completed trading days; adjustment: {obj.get('adjustment','n/a')}",
-           '- No trading advice or replacement of live V2 signals.',
+           f"- Source: {obj.get('source','n/a')}; completed bars: {obj.get('bars',0)}; adjustment: {obj.get('adjustment','n/a')}",
+           '- Research only; NO orders or live strategy changes. Cash yield assumption = 0% p.a.',
+           '- Signals are based on the previous completed close; all fills at the next session open; trading costs = 10 bps per side (assumed).',
+           '- ETF distributions and adjust factors need independent audit. V2.0 MACRO data are incomplete; no faithful V2.0 numerical comparison yet.',
            '']
-    if 'results' not in obj:return '\n'.join(lines)+'\n'
-    lines+=['## Pre-registered portfolio comparisons','','10% core + up to 5% satellite; remaining 85% cash; equal next-day-open fills; all costs explicit.','',
-            '| Policy | Full sample CAGR | Full max DD | Holdout return | Holdout max DD | Holdout Sharpe | Trades | Correction exits |',
+    if not obj.get('aggregate'):return '\n'.join(lines)+'\n'
+    lines+=['## Matched rolling three-year windows',
+            'Each window starts with a fresh portfolio of 10% ETF core + 5% satellite cash + 85% other cash. Adjacent windows overlap and must NOT be treated as independent observations.',
+            '',
+            '| Strategy | Avg satellite P&L (portfolio pp) | vs immediate addition (pp) | vs DCA (pp) | Win share vs immediate | Avg max DD of total portfolio | Worst max DD | Avg trade count |',
             '|---|---:|---:|---:|---:|---:|---:|---:|']
-    for o in obj['results']:
-        h=o['holdout']; f=o['full']
-        lines.append(f"| {o['policy']} | {f['cagr_pct']:.2f}% | {f['max_drawdown_pct']:.2f}% | {h['total_return_pct']:.2f}% | {h['max_drawdown_pct']:.2f}% | {h['sharpe_rf0']} | {o['trades']} | {o['correction_exit_count']} |")
-    lines+=['','**DO NOT RANK AS VERIFIED** until distributions/corporate actions are audited, multi-period out-of-sample checks pass and macro data are available for faithful V2.0 comparisons.','',
-            '## Execution and correction rules','',
-            '- Indicators use only completed close bars; orders execute at next session open.',
-            '- Satellite exits on trend loss, 55/20 Donchian exit, MA200 exit, or pre-registered 2.5 ATR correction; 5-session cooling-off after correction.',
-            '- Any 15% portfolio excess is trimmed from satellite at next open, with core protected; residual core-only breaches are flagged.',
-            '- Costs use 10 bps per side (commission + slippage, illustrative), with sensitivity checks at 5 and 20 bps.',
-            '- Current V2.0 multi-factor strategy requires daily Au99.99/USD-CNY/TIPS/DXY data and is not ranked here.',
+    for v in obj['aggregate']:
+        lines.append(f"| {v['policy']} | {v['average_satellite_profit_points_of_initial100']:+.3f} | {v['mean_delta_vs_lump_points']:+.3f} | {v['mean_delta_vs_DCA_points']:+.3f} | {v['win_fraction_vs_lump']:.0%} | {v['avg_full_maxDD_pct']:.2f}% | {v['worst_full_maxDD_pct']:.2f}% | {v['mean_trades']:.1f} |")
+    lines+=['','## Rolling window coverage','',
+            '| Window | Start | End |',
+            '|---|---|---|']
+    for w in obj['windows']:
+        lines.append(f"| {w['window_id']} | {w['start']} | {w['end']} |")
+    lines+=['','## Interpretation / no premature winner','',
+            '- Holdings acquired before the window start are not carried into subsequent windows: this removes artificial 13-year drift of the 10% core.',
+            '- The 15% exposure target can still be exceeded after sudden price moves; core-only violations are flagged, not silently sold.',
+            '- ATR correction is tested as a paired overlay, not presumed to improve performance.',
+            '- **These outputs are provisional.** Independent validation of dividend/split treatment, macro-factor histories, rolling OOS and sensitivity to costs/latency is required before selecting a live signal.',
             '']
     return '\n'.join(lines)
 
 def main():
     path=ROOT/'history.json'
-    status={'status':'BLOCKED','notes':'Long history not yet acquired; 120-bar quote cache is insufficient.'}
+    status={'status':'BLOCKED','notes':'Long, adjusted, audited history is not yet available.'}
     if path.exists():
         data=json.loads(path.read_text(encoding='utf-8'))
         rows=data.get('rows',[])
         status.update({'bars':len(rows),'source':data.get('source'),'adjustment':data.get('adjustment')})
-        if len(rows)>=800:
+        if len(rows)>=1100:
             try:
-                all_results=[simulate(rows,p) for p in POLICIES]
-                for o in all_results:o.pop('trade_log',None)
+                length=756
+                starts=list(range(N_WARMUP,len(rows)-length+1,252))
+                if len(rows)-length not in starts:starts.append(len(rows)-length)
+                windows=[]
+                for z,start in enumerate(sorted(set(starts))):
+                    end=start+length
+                    vals=[simulate(rows,p,start=start,end=end) for p in POLICIES]
+                    for o in vals:o.pop('trade_log',None)
+                    windows.append({'window_id':z+1,'start':rows[start]['date'],'end':rows[end-1]['date'],'results':vals})
                 status.update({'status':'PROVISIONAL_UNAUDITED',
-                  'notes':'Research calculations completed, but corporate-action/distribution-adjusted total returns and independent out-of-sample validity are NOT certified.',
-                  'results':all_results,
-                  'sensitivity_5bps':{p:simulate(rows,p,cost=0.0005)['holdout'] for p in POLICIES if p.startswith('S')},
-                  'sensitivity_20bps':{p:simulate(rows,p,cost=0.002)['holdout'] for p in POLICIES if p.startswith('S')},
-                  'one_extra_day_delay':{p:simulate(rows,p,delay=1)['holdout'] for p in POLICIES if p.startswith('S')}})
+                  'notes':'Matched rolling 3-year portfolios calculated. Historical returns/adjustments and distribution events not independently audited; overlapping windows are correlated.',
+                  'windows':windows,'aggregate':aggregate_windows(windows),
+                  'sensitivity_5bps':{p:simulate(rows,p,cost=0.0005,start=starts[-1],end=starts[-1]+length)['holdout'] for p in POLICIES if p.startswith('S')},
+                  'sensitivity_20bps':{p:simulate(rows,p,cost=0.002,start=starts[-1],end=starts[-1]+length)['holdout'] for p in POLICIES if p.startswith('S')},
+                  'one_extra_day_delay':{p:simulate(rows,p,delay=1,start=starts[-1],end=starts[-1]+length)['holdout'] for p in POLICIES if p.startswith('S')}})
             except Exception as e:status.update({'status':'ERROR','notes':f'{type(e).__name__}: {e}'})
+        else:status.update({'notes':'Fewer than 1100 completed sessions; minimum multiwindow study cannot proceed.'})
     (ROOT/'RESULTS.json').write_text(json.dumps(status,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
     (ROOT/'RESULTS.md').write_text(render(status),encoding='utf-8')
-    print('Research status:',status['status'],'bars:',status.get('bars',0))
+    print('Research status:',status['status'],'bars:',status.get('bars',0),'windows:',len(status.get('windows',[])))
 if __name__=='__main__':main()
