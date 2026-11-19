@@ -6,7 +6,8 @@
  * Does not calculate or generate trading signals.
  *
  * Bind one Cloudflare Secret: GITHUB_TOKEN
- * Cron Trigger (UTC weekdays): */5 1-3,5-7 * * 1-5
+ * Bind one Cloudflare Service: MARKET_DATA -> existing gold-etf-518880 Worker
+ * Cron Trigger (UTC weekdays): */5 1-3,5-7 * * MON-FRI
  *
  * Do not expose the token in HTTP responses, logs or the repository.
  */
@@ -106,7 +107,7 @@ async function readCurrent(token) {
   const file = await github("/contents/docs/latest.json?ref=main", token);
   if (file.encoding !== "base64" || !file.content)
     throw new Error("Cannot decode GitHub latest.json");
-  const binary = atob(file.content.replace(/\\s/g, ""));
+  const binary = atob(file.content.replace(/\s/g, ""));
   const bytes = Uint8Array.from(binary, c => c.charCodeAt(0));
   return JSON.parse(new TextDecoder().decode(bytes));
 }
@@ -144,10 +145,10 @@ async function publish(env) {
     console.log("Skip: outside Beijing A-share trading hours");
     return;
   }
-  const srcResponse = await fetch(SOURCE_URL, {
+  if (!env.MARKET_DATA) throw new Error("Missing MARKET_DATA service binding");
+  const srcResponse = await env.MARKET_DATA.fetch(new Request(SOURCE_URL, {
     headers: { Accept: "application/json" },
-    cf: { cacheTtl: 0, cacheEverything: false },
-  });
+  }));
   if (!srcResponse.ok) throw new Error("Quote Worker HTTP " + srcResponse.status);
   const payload = await srcResponse.json();
   const age = validate(payload, now);
