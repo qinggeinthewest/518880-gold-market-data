@@ -1,52 +1,52 @@
 {
   "instrument": "SSE:518880",
-  "snapshot_published_utc": "2026-11-19T05:55:37.029784+00:00",
+  "snapshot_published_utc": "2026-11-19T06:00:12.973Z",
   "quote_age_minutes_at_publish": 0.03,
   "quote": {
     "source": "腾讯财经",
     "symbol": "518880",
     "name": "黄金ETF华安",
-    "price_yuan": 7.633,
+    "price_yuan": 7.63,
     "previous_close_yuan": 7.707,
     "open_yuan": 7.655,
     "high_yuan": 7.667,
     "low_yuan": 7.539,
-    "volume_hands": 4381256,
-    "turnover_yuan": 3336440000,
-    "exchange_time_ms": 1795067735000,
-    "exchange_time_beijing": "2026-11-19 13:55:35",
-    "change_percent": -0.96
+    "volume_hands": 4440840,
+    "turnover_yuan": 3381910000,
+    "exchange_time_ms": 1795068011000,
+    "exchange_time_beijing": "2026-11-19 14:00:11",
+    "change_percent": -0.999
   },
   "quote_crosscheck": [
     {
       "source": "腾讯财经",
       "symbol": "518880",
       "name": "黄金ETF华安",
-      "price_yuan": 7.633,
+      "price_yuan": 7.63,
       "previous_close_yuan": 7.707,
       "open_yuan": 7.655,
       "high_yuan": 7.667,
       "low_yuan": 7.539,
-      "volume_hands": 4381256,
-      "turnover_yuan": 3336440000,
-      "exchange_time_ms": 1795067735000,
-      "exchange_time_beijing": "2026-11-19 13:55:35",
-      "change_percent": -0.96
+      "volume_hands": 4440840,
+      "turnover_yuan": 3381910000,
+      "exchange_time_ms": 1795068011000,
+      "exchange_time_beijing": "2026-11-19 14:00:11",
+      "change_percent": -0.999
     },
     {
       "source": "新浪财经",
       "symbol": "518880",
       "name": "黄金ETF华安",
-      "price_yuan": 7.633,
+      "price_yuan": 7.63,
       "previous_close_yuan": 7.707,
       "open_yuan": 7.655,
       "high_yuan": 7.667,
       "low_yuan": 7.539,
-      "volume_hands": 4381255.88,
-      "turnover_yuan": 3336438566,
-      "exchange_time_ms": 1795067735000,
-      "exchange_time_beijing": "2026-11-19 13:55:35",
-      "change_percent": -0.96
+      "volume_hands": 4440839.88,
+      "turnover_yuan": 3381909833,
+      "exchange_time_ms": 1795068011000,
+      "exchange_time_beijing": "2026-11-19 14:00:11",
+      "change_percent": -0.999
     }
   ],
   "history": {
@@ -786,8 +786,8 @@
     ]
   },
   "sources": {
-    "quote": "Tencent Finance / Sina Finance via Cloudflare Worker",
-    "history": "Sina Money domestic K-line interface via Cloudflare Worker"
+    "quote": "Tencent Finance / Sina Finance via existing Cloudflare Worker",
+    "history": "Sina Money domestic K-line via existing Cloudflare Worker"
   },
-  "scope": "ETF market data only; does not validate SGE Au99.99, USD/CNY, TIPS or DXY; no investment signals calculated here"
+  "scope": "ETF market data only; Au99.99, onshore USD/CNY, TIPS and DXY unverified"
 }
