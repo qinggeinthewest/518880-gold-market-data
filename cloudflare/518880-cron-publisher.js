@@ -7,7 +7,7 @@
  *
  * Bind one Cloudflare Secret: GITHUB_TOKEN
  * Bind one Cloudflare Service: MARKET_DATA -> existing gold-etf-518880 Worker
- * Cron Trigger (UTC weekdays): */5 1-3,5-7 * * MON-FRI
+ * Cron schedule: every five minutes during UTC hours 01-03 and 05-07, weekdays.
  *
  * Do not expose the token in HTTP responses, logs or the repository.
  */
