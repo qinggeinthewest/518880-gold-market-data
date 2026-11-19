@@ -9,11 +9,8 @@ on:
     paths:
       - '.github/workflows/update_518880.yml'
       - 'scripts/pull_snapshot.py'
-  schedule:
-    # UTC; 01-03/05-07 UTC = 09-11/13-15 Beijing weekdays.
-    # Irregular :03/:08/... minute offsets avoid top-of-hour congestion.
-    # GitHub schedule may still delay/skip; freshness checks must never be relaxed.
-    - cron: '3/5 1-3,5-7 * * 1-5'
+  # Scheduled updates migrated to Cloudflare Cron publisher (2026-11-19).
+  # Keep workflow_dispatch and code-change push triggers as manual fallback.
 
 permissions:
   contents: write
