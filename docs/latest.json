@@ -1,52 +1,52 @@
 {
   "instrument": "SSE:518880",
-  "snapshot_published_utc": "2026-11-20T05:50:12.899Z",
-  "quote_age_minutes_at_publish": 0.03,
+  "snapshot_published_utc": "2026-11-20T05:55:13.350Z",
+  "quote_age_minutes_at_publish": 0.04,
   "quote": {
     "source": "腾讯财经",
     "symbol": "518880",
     "name": "黄金ETF华安",
-    "price_yuan": 7.242,
+    "price_yuan": 7.256,
     "previous_close_yuan": 7.612,
     "open_yuan": 7.324,
     "high_yuan": 7.339,
     "low_yuan": 7.183,
-    "volume_hands": 7988101,
-    "turnover_yuan": 5786390000,
-    "exchange_time_ms": 1795153811000,
-    "exchange_time_beijing": "2026-11-20 13:50:11",
-    "change_percent": -4.861
+    "volume_hands": 8226943,
+    "turnover_yuan": 5959560000,
+    "exchange_time_ms": 1795154111000,
+    "exchange_time_beijing": "2026-11-20 13:55:11",
+    "change_percent": -4.677
   },
   "quote_crosscheck": [
     {
       "source": "腾讯财经",
       "symbol": "518880",
       "name": "黄金ETF华安",
-      "price_yuan": 7.242,
+      "price_yuan": 7.256,
       "previous_close_yuan": 7.612,
       "open_yuan": 7.324,
       "high_yuan": 7.339,
       "low_yuan": 7.183,
-      "volume_hands": 7988101,
-      "turnover_yuan": 5786390000,
-      "exchange_time_ms": 1795153811000,
-      "exchange_time_beijing": "2026-11-20 13:50:11",
-      "change_percent": -4.861
+      "volume_hands": 8226943,
+      "turnover_yuan": 5959560000,
+      "exchange_time_ms": 1795154111000,
+      "exchange_time_beijing": "2026-11-20 13:55:11",
+      "change_percent": -4.677
     },
     {
       "source": "新浪财经",
       "symbol": "518880",
       "name": "黄金ETF华安",
-      "price_yuan": 7.242,
+      "price_yuan": 7.256,
       "previous_close_yuan": 7.612,
       "open_yuan": 7.324,
       "high_yuan": 7.339,
       "low_yuan": 7.183,
-      "volume_hands": 7988101.19,
-      "turnover_yuan": 5786390101,
-      "exchange_time_ms": 1795153811000,
-      "exchange_time_beijing": "2026-11-20 13:50:11",
-      "change_percent": -4.861
+      "volume_hands": 8226943.19,
+      "turnover_yuan": 5959559433,
+      "exchange_time_ms": 1795154111000,
+      "exchange_time_beijing": "2026-11-20 13:55:11",
+      "change_percent": -4.677
     }
   ],
   "history": {
