@@ -1,6 +1,6 @@
 {
   "instrument": "SSE:518880",
-  "snapshot_published_utc": "2026-11-26T06:40:12.437Z",
+  "snapshot_published_utc": "2026-11-26T06:45:12.405Z",
   "quote_age_minutes_at_publish": 0.02,
   "quote": {
     "source": "腾讯财经",
@@ -11,10 +11,10 @@
     "open_yuan": 7.268,
     "high_yuan": 7.35,
     "low_yuan": 7.247,
-    "volume_hands": 6474314,
-    "turnover_yuan": 4726110000,
-    "exchange_time_ms": 1795675211000,
-    "exchange_time_beijing": "2026-11-26 14:40:11",
+    "volume_hands": 6533269,
+    "turnover_yuan": 4768950000,
+    "exchange_time_ms": 1795675511000,
+    "exchange_time_beijing": "2026-11-26 14:45:11",
     "change_percent": 1.395
   },
   "quote_crosscheck": [
@@ -27,10 +27,10 @@
       "open_yuan": 7.268,
       "high_yuan": 7.35,
       "low_yuan": 7.247,
-      "volume_hands": 6474314,
-      "turnover_yuan": 4726110000,
-      "exchange_time_ms": 1795675211000,
-      "exchange_time_beijing": "2026-11-26 14:40:11",
+      "volume_hands": 6533269,
+      "turnover_yuan": 4768950000,
+      "exchange_time_ms": 1795675511000,
+      "exchange_time_beijing": "2026-11-26 14:45:11",
       "change_percent": 1.395
     },
     {
@@ -42,10 +42,10 @@
       "open_yuan": 7.268,
       "high_yuan": 7.35,
       "low_yuan": 7.247,
-      "volume_hands": 6474314.1,
-      "turnover_yuan": 4726107314,
-      "exchange_time_ms": 1795675211000,
-      "exchange_time_beijing": "2026-11-26 14:40:11",
+      "volume_hands": 6533269.1,
+      "turnover_yuan": 4768951018,
+      "exchange_time_ms": 1795675511000,
+      "exchange_time_beijing": "2026-11-26 14:45:11",
       "change_percent": 1.395
     }
   ],
